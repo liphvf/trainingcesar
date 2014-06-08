@@ -9,6 +9,8 @@ public class PostSearchOptions {
 	private String text;
 	private Date date;
 	private String author;
+	private Integer StartPosition;
+	private Integer MaxResults;
 
 	public Integer getId() {
 		return id;
@@ -50,4 +52,24 @@ public class PostSearchOptions {
 		this.author = author;
 	}
 
+
+	public Integer getStartPosition() {
+		return StartPosition;
+	}
+
+	public void setStartPosition(Integer startPosition) {
+		StartPosition = startPosition;
+	}
+
+	public Integer getMaxResults() {
+		return MaxResults;
+	}
+
+	public void setMaxResults(Integer maxResults) {
+		MaxResults = maxResults;
+	}
+
+	
+	
+	
 }

@@ -12,7 +12,12 @@ import training.bms.business.PostSearchOptions;
 import training.bms.business.Post;
 
 public class PostDao {
-	
+
+	// pensar se vale a pena
+	// public boolean containsPost(String postTitle) {
+	//
+	// return searchPost(postTitle) != null;
+	// }
 
 	public void insertPost(Post post) {
 
@@ -33,25 +38,21 @@ public class PostDao {
 
 		}
 
-		if (options.getText() != null
-				&& options.getText().length() > 0) {
-			predicate
-					.append(" and upper(Post.text) like :postText");
+		if (options.getText() != null && options.getText().length() > 0) {
+			predicate.append(" and upper(Post.text) like :postText");
 
 		}
-		
+
 		if (options.getDate() != null) {
 			predicate.append(" and upper(Post.date) like :postDate");
 
 		}
-		
+
 		if (options.getAuthor() != null && options.getAuthor().length() > 0) {
 			predicate.append(" and upper(Post.Author) like :postAuthor");
 
 		}
 
-		
-		
 		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
 		EntityManager manager = factory.createEntityManager();
 
@@ -64,12 +65,26 @@ public class PostDao {
 
 		}
 
-		
-		if (options.getText() != null
-				&& options.getText().length() > 0) {
+		if (options.getText() != null && options.getText().length() > 0) {
 			query.setParameter("postText", "%"
 					+ options.getText().toUpperCase() + "%");
 
+		}
+
+		if (options.getAuthor() != null && options.getAuthor().length() > 0) {
+			query.setParameter("postAuthor", "%"
+					+ options.getAuthor().toUpperCase() + "%");
+		}
+
+		if (options.getDate() != null) {
+			query.setParameter("postDate", options.getDate());
+		}
+
+		if (options.getStartPosition() != null) {
+			query.setFirstResult(options.getStartPosition());
+		}
+		if (options.getMaxResults() != null) {
+			query.setMaxResults(options.getMaxResults());
 		}
 
 		List<Post> result = query.getResultList();
@@ -98,6 +113,67 @@ public class PostDao {
 		}
 
 	}
+	
+	
+	public int searchPostCount(PostSearchOptions options) {
+
+		StringBuilder predicate = new StringBuilder("1 = 1");
+
+		if (options.getTitle() != null && options.getTitle().length() > 0) {
+			predicate.append(" and upper(Post.title) like :postTitle");
+
+		}
+
+		if (options.getText() != null && options.getText().length() > 0) {
+			predicate.append(" and upper(Post.text) like :postText");
+
+		}
+
+		if (options.getDate() != null) {
+			predicate.append(" and upper(Post.date) like :postDate");
+
+		}
+
+		if (options.getAuthor() != null && options.getAuthor().length() > 0) {
+			predicate.append(" and upper(Post.Author) like :postAuthor");
+
+		}
+
+		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
+		EntityManager manager = factory.createEntityManager();
+		
+		TypedQuery<Integer> query = manager.createQuery(
+				"SELECT count(post) FROM training.bms.business.Post post where "
+						+ predicate, Integer.class);
+
+		if (options.getTitle() != null && options.getTitle().length() > 0) {
+			query.setParameter("postTitle", "%"
+					+ options.getTitle().toUpperCase() + "%");
+
+		}
+
+		if (options.getText() != null && options.getText().length() > 0) {
+			query.setParameter("postText", "%"
+					+ options.getText().toUpperCase() + "%");
+
+		}
+
+		if (options.getAuthor() != null && options.getAuthor().length() > 0) {
+			query.setParameter("postAuthor", "%"
+					+ options.getAuthor().toUpperCase() + "%");
+		}
+
+		if (options.getDate() != null) {
+			query.setParameter("postDate", options.getDate());
+		}
+
+		Integer result = query.getSingleResult();
+
+		return result;
+	}
+	
+	
+	
 
 	public void deletePost(Post post) {
 		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;

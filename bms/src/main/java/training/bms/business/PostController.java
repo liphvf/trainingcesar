@@ -39,25 +39,30 @@ public class PostController {
 		dao.deletePost(post);
 	}
 
+//	public void updatePost(Post post) {
+//
+//		Post databasePost = dao.searchPost(post.getTitle());
+//
+//		if (databasePost == null) {
+//			dao.updatePost(post);
+//		} else {
+//
+//			if (post.getId().equals(databasePost.getId())) {
+//
+//				dao.updatePost(post);
+//
+//			} else {
+//				throw new BusinessException(" the is a Post named "
+//						+ post.getTitle() + " already ");
+//
+//			}
+//		}
+//
+//	}
+
+	
 	public void updatePost(Post post) {
-
-		Post databasePost = dao.searchPost(post.getTitle());
-
-		if (databasePost == null) {
-			dao.updatePost(post);
-		} else {
-
-			if (post.getId().equals(databasePost.getId())) {
-
-				dao.updatePost(post);
-
-			} else {
-				throw new BusinessException(" the is a Post named "
-						+ post.getTitle() + " already ");
-
-			}
-		}
-
+		dao.updatePost(post);
 	}
-
+	
 }

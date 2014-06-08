@@ -121,5 +121,7 @@ public class BlogControllerTest {
 
 		EasyMock.verify(dao);
 	}
+	
+//não fiz o test para search options
 
 }

@@ -60,7 +60,7 @@ public class Post {
 	}
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "POS_CREATION_DATE")
+	@Column(name = "POS_DATE")
 	public Date getDate() {
 		return date;
 	}
