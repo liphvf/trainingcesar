@@ -33,7 +33,7 @@ public class NewPost {
 		try {
 			PostController controller = new PostController();
 
-			controller.savePost(form.getPost());
+			controller.savePost(post);
 			message.setSummary("post was sucessfully saved");
 			message.setSeverity(FacesMessage.SEVERITY_INFO);
 
@@ -45,7 +45,7 @@ public class NewPost {
 
 		FacesContext context = FacesContext.getCurrentInstance();
 
-		context.addMessage(null, message);
+		context.addMessage("form:post:title", message);
 
 	}
 }

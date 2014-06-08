@@ -114,9 +114,6 @@ public class SearchPost {
 	}
 
 	public String deletePost(Post post) {
-
-		this.form = new PostForm();
-		this.form.setPost(post);
 		this.post = post;
 		this.postDeleted = false;
 		return "deletePost";
@@ -127,9 +124,8 @@ public class SearchPost {
 		FacesMessage message = new FacesMessage();
 
 		PostController controller = new PostController();
-		controller.deletePost(form.getPost());
+		controller.deletePost(post);
 		reset();
-		
 		postDeleted = true;
 		message.setSummary(" post was sucessfully deleted ");
 		message.setSeverity(FacesMessage.SEVERITY_INFO);

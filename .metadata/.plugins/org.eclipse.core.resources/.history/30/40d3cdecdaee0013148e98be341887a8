@@ -20,15 +20,6 @@ public class SearchPost {
 	private List<Post> result;
 	private Post post;
 	private boolean postDeleted = false;
-	private PostForm form;
-
-	public PostForm getForm() {
-		return form;
-	}
-
-	public void setForm(PostForm form) {
-		this.form = form;
-	}
 
 	public SearchPost() {
 		reset();
@@ -82,8 +73,9 @@ public class SearchPost {
 	public String updatePost(Post post) {
 
 		Post postAux = new Post();
-		this.form = new PostForm();
-		this.form.setPost(postAux);
+		postAux.setId(post.getId());
+		postAux.setTitle(post.getTitle());
+		postAux.setText(post.getText());
 
 		this.post = postAux;
 		return "updatePost";
@@ -114,9 +106,6 @@ public class SearchPost {
 	}
 
 	public String deletePost(Post post) {
-
-		this.form = new PostForm();
-		this.form.setPost(post);
 		this.post = post;
 		this.postDeleted = false;
 		return "deletePost";
@@ -127,9 +116,8 @@ public class SearchPost {
 		FacesMessage message = new FacesMessage();
 
 		PostController controller = new PostController();
-		controller.deletePost(form.getPost());
+		controller.deletePost(post);
 		reset();
-		
 		postDeleted = true;
 		message.setSummary(" post was sucessfully deleted ");
 		message.setSeverity(FacesMessage.SEVERITY_INFO);

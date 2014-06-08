@@ -37,6 +37,8 @@ public class SearchBlog {
 	}
 
 	public SearchBlog() {
+		// options = new BlogSearchOptions();
+
 		reset();
 
 	}
@@ -72,7 +74,8 @@ public class SearchBlog {
 	}
 
 	public void search() {
-
+		
+		
 		BlogController controller = new BlogController();
 		result = controller.searchBlog(options);
 	}
@@ -137,9 +140,8 @@ public class SearchBlog {
 	}
 
 	public void confirmDeletion() {
-
-		// não tem o try catch pois na regra de negocio não tem nenhuma
-		// execption
+		
+		//não tem o try catch pois na regra de negocio não tem nenhuma execption
 
 		FacesMessage message = new FacesMessage();
 
@@ -154,9 +156,8 @@ public class SearchBlog {
 
 		FacesContext context = FacesContext.getCurrentInstance();
 		context.addMessage(null, message);
-
-		// context está assosiado a requisição (ou seja menor que uma sessão)
-		// (perceba que ao re-carregar a pagina a menssagem some)
+		
+		//context está assosiado a requisição (ou seja menor que uma sessão) (perceba que ao re-carregar a pagina a menssagem some)
 
 	}
 }

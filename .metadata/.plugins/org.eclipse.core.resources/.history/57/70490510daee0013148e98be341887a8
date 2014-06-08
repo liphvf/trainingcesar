@@ -45,7 +45,7 @@ public class NewPost {
 
 		FacesContext context = FacesContext.getCurrentInstance();
 
-		context.addMessage(null, message);
+		context.addMessage("form:post:title", message);
 
 	}
 }

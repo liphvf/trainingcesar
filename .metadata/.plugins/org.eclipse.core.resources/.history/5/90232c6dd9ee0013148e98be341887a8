@@ -55,7 +55,21 @@ public class NewBlog {
 		FacesContext context = FacesContext.getCurrentInstance();
 		// no caso de null seria
 		context.addMessage("form:blog:name", message);
+		
+		
+		/* 	context.addMessage("id", message);
+		 * 
+		 * no xhtml
+		 * <h:inputText id="#id" value="#{newBlog.blog.name}"></h:inputText>
+		 * 
+		 * <h:message for==>
+		 * 
+		 * DEPOIS VEJO
+		 * 
+		 * */
 
+		// control + shift + r = procura por recurso ou seja arquivo o T,
+		// porcura por classes
 
 	}
 }
