@@ -13,19 +13,24 @@
 
 			<h1>Delete Post</h1>
 
-			<bms:post post="#{searchPost.post}" disabled="True"></bms:post>
+			<bms:post form="#{searchPost.form}" disabled="True">
 
-
-			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
+				<f:facet name="buttons">
 					<h:commandButton type="submit" styleClass="btn btn-primary"
 						value="Delete" action="#{searchPost.confirmDeletion}"
 						disabled="#{searchPost.postDeleted}" />
 
 
 					<a href="searchPost.xhtml" class="btn btn-primary" role="button">Back</a>
-				</div>
-			</div>
+
+
+				</f:facet>
+
+
+
+			</bms:post>
+
+
 
 
 			<h:messages />

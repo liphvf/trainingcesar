@@ -3,10 +3,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:bms="http://java.sun.com/jsf/composite/bms">
-	<ui:composition template="/templatepost.xhtml">
-	
-<ui:define name="content">
+<ui:composition template="/templatepost.xhtml">
+
+	<ui:define name="content">
 
 		<h:form id="form" styleClass="form-horizontal">
 
@@ -14,22 +15,26 @@
 
 
 
-			<bms:post post="#{newPost.post}" id="post"></bms:post>
+			<bms:post form="#{newPost.form}" id="post">
 
+				<f:facet name="buttons">
 
-			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10">
 					<h:commandButton type="submit" styleClass="btn btn-primary"
 						value="Save" action="#{newPost.savePost}" />
-				</div>
-			</div>
+
+
+				</f:facet>
+
+			</bms:post>
+
+
 
 
 			<h:messages />
 
 		</h:form>
 
-</ui:define>
+	</ui:define>
 </ui:composition>
 
 </html>
