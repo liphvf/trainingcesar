@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	<navigation-rule>
+		<!-- não importa a pagina que o usuario está vendo -->
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<!-- se em algum momento ele achar updateBlog -->
+			<from-outcome>updateBlog</from-outcome>
+			<!-- Redirecione para essa pagina já que foi visto o updateBlog(a execução 
+				de um metodo produzir esse updateblog, leve para a pagina a baixo) -->
+			<to-view-id>/blog/updateBlog.xhtml</to-view-id>
+
+			<!-- <redirect></redirect> -->
+			
+		</navigation-case>
+	</navigation-rule>
+	
+	
+	<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>deleteBlog</from-outcome>
+			<to-view-id>/blog/deleteBlog.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+		<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>searchBlog</from-outcome>
+			<to-view-id>/blog/searchBlog.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	
+</faces-config>
+
+<!-- existe 2 maneira de interação foward (default) e redirect -->
+<!--redirect: seria uma agora acessa a outra pagina. -->
+
+
+
+<!-- No foward ele encaminha sem criar uma nova requisição, e possível ver 
+	o código em responta, e a url não muda. -->
+<!-- redirect, ele criar uma nova requisação mantendo a antiga, e agora a 
+	url muda, pois ele abre uma nova pasta, e a resposta (o codigo) está vazio -->
+
+<!-- comportamento do botao de re-load: no foward , caso eu aperto o re-load 
+	no browser, ele iria re-enviar uma requisação -->
+<!-- No caso do redirect ele simplesmente iria re-ler a pagina, pois ele 
+	mudou de pagina com a nova requisição -->
+<!-- Exemplo: se no banco você fosse pagar uma conta, aperta o botão de pagar 
+	a conta e depois em seguida ele abre uma nova pagina de comfirmação de pagamento -->
+	<!-- no caso no foward ele iria pagar de novo a conta -->
+	<!-- no caso do redirect ele iria re-abrir a pagina de confirmação de pagamento	 -->

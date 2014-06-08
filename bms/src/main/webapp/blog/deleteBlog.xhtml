@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:bms="http://java.sun.com/jsf/composite/bms">
+<ui:composition template="/template.xhtml">
+
+	<ui:define name="content">
+		<h:form>
+
+			<h1>Delete Blog</h1>
+
+			<bms:blog blog="#{searchBlog.blog}" disabled="True">
+
+				<f:facet name="buttons">
+
+					<h:commandButton type="submit" styleClass="btn btn-primary"
+						value="Delete" action="#{searchBlog.confirmDeletion}"
+						disabled="#{searchBlog.blogDeleted}" />
+
+
+					<a href="searchBlog.xhtml" class="btn btn-primary" role="button">Back</a>
+				</f:facet>
+
+			</bms:blog>
+
+
+			<h:messages />
+
+
+		</h:form>
+
+
+	</ui:define>
+
+
+</ui:composition>
+
+
+</html>
