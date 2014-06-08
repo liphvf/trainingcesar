@@ -1554,3 +1554,67 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-06 22:15:06.534
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+!SESSION 2014-06-08 00:19:22.231 -----------------------------------------------
+eclipse.buildId=4.3.2.M20140221-1700
+java.version=1.7.0_55
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:19:54.777
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:19:54.814
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.116
+!MESSAGE Launch configuration RunDatabase references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.117
+!MESSAGE Launch configuration RunDatabase references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.124
+!MESSAGE Launch configuration RunDatabase references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.125
+!MESSAGE Launch configuration CreateDatabase references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.126
+!MESSAGE Launch configuration CreateDatabase references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.132
+!MESSAGE Launch configuration CreateDatabase references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.133
+!MESSAGE Launch configuration BlogControllerTest references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.134
+!MESSAGE Launch configuration BlogControllerTest references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2014-06-08 00:20:11.141
+!MESSAGE Launch configuration BlogControllerTest references non-existing project bms.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:20:25.381
+!MESSAGE CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-egit does not contain lifecycle mapping metadata
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:20:25.385
+!MESSAGE CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subversive does not contain lifecycle mapping metadata
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:20:25.387
+!MESSAGE CatalogItem org.eclipse.m2e.discovery.lifecyclemapping.m2e-subclipse does not contain lifecycle mapping metadata
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:20:42.556
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:20:42.628
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.osgi 2 1 2014-06-08 00:20:53.904
+!MESSAGE NLS missing message: CANNOT_FIND_FACELET_TAGLIB in: org.eclipse.jst.jsf.core.validation.internal.facelet.messages
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:21:25.820
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2014-06-08 00:21:25.823
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
