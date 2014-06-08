@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Generated;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +22,7 @@ public class Blog {
 	private List<Post> posts;
 
 	
-	private void Blog() {
+	private void Blos() {
 
 		posts = new ArrayList<>();
 		
@@ -42,7 +41,7 @@ public class Blog {
 
 	// SE TIVER UM CAMPO NO BANCO COM DESCRIÇÃO FICA DS
 	@Size(min = 1, max = 1000)
-	@Column(name = "BLO_DS")
+	@Column(name = "BLOG_DS")
 	public String getDescription() {
 		return description;
 	}
@@ -67,7 +66,7 @@ public class Blog {
 	//post está no lado muitos
 	//no caso a propriedade de retorna uma própria blog é o atributo blog
 	
-	@OneToMany(mappedBy="blog", cascade=CascadeType.REMOVE)
+	@OneToMany(mappedBy="blog")
 	public List<Post> getPosts() {
 		return posts;
 	}
