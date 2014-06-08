@@ -11402,3 +11402,15 @@ org.eclipse.core.runtime.CoreException: Launch configuration BlogControllerTest 
 2014-06-08 00:22:09,120 [main] INFO  o.e.m2e.actions.ExecutePomAction - Creating new launch configuration
 2014-06-08 00:22:20,696 [Worker-0] INFO  o.e.m.i.launch.MavenLaunchDelegate - /home/liphvf/Dropbox/Documents/Treinamendo C.E.S.A.R/Eclipse_Workspace/bms
 2014-06-08 00:22:20,697 [Worker-0] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B tomcat7:run
+2014-06-08 00:26:59,603 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-08 00:26:59,615 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2014-06-08 00:26:59,617 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-08 00:26:59,618 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2014-06-08 00:34:07,157 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-08 00:34:07,158 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2014-06-08 00:34:07,160 [Worker-5] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-08 00:34:07,160 [Worker-5] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2014-06-08 00:34:28,536 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-08 00:34:28,536 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2014-06-08 00:34:28,540 [Worker-8] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2014-06-08 00:34:28,540 [Worker-8] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
