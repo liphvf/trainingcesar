@@ -57,7 +57,7 @@ public class PostDao {
 		EntityManager manager = factory.createEntityManager();
 
 		TypedQuery<Post> query = manager.createQuery(
-				"select post from Post post where " + predicate, Post.class);
+				"select post from Post post where " + predicate + "order by post.title", Post.class);
 
 		if (options.getTitle() != null && options.getTitle().length() > 0) {
 			query.setParameter("postTitle", "%"

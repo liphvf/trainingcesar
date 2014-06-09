@@ -24,8 +24,17 @@ public class SearchPost {
 	private boolean postDeleted = false;
 	private PostForm form;
 	private ArrayList<Integer> pages;
-	
-	
+	// esse page é a página atual
+	private int page;
+
+	public int getPage() {
+		return page;
+	}
+
+	public void setPage(int page) {
+		this.page = page;
+	}
+
 	public PostForm getForm() {
 		return form;
 	}
@@ -76,7 +85,6 @@ public class SearchPost {
 	public void setPostDeleted(boolean postDeleted) {
 		this.postDeleted = postDeleted;
 	}
-	
 
 	public ArrayList<Integer> getPages() {
 		return pages;
@@ -93,31 +101,42 @@ public class SearchPost {
 	public void search() {
 
 		PostController controller = new PostController();
-	//	result = controller.searchPost(options);
-		
+		// result = controller.searchPost(options);
+
 		int resultCount = controller.searchPostCount(options);
 		int pageCount = resultCount / RESULTS_PER_PAGE;
-		
+
 		if (resultCount % RESULTS_PER_PAGE > 0) {
 			++pageCount;
 		}
-		 pages = new ArrayList<Integer>();
+		pages = new ArrayList<Integer>();
 		for (int page = 1; page <= pageCount; ++page) {
 			pages.add(page);
 		}
-		
+
 		goToPage(1);
-		System.out.println(controller.searchPostCount(options));
+		// System.out.println(controller.searchPostCount(options));
 	}
-	
+
 	public void goToPage(int page) {
 		PostController controller = new PostController();
-		result = controller.searchPost(options);
-		
+
+		this.page = page;
 		// (pagina - 1) * results per pagina + 1
-		options.setStartPosition((page -1)* RESULTS_PER_PAGE +1);
+		// tirou o +1 pois o starPosition começa de 0
+		options.setStartPosition((page - 1) * RESULTS_PER_PAGE);
 		options.setMaxResults(RESULTS_PER_PAGE);
 		result = controller.searchPost(options);
+	}
+
+	public String getPageClass(int page) {
+		if (page == this.page) {
+			return "active";
+		} else {
+			return "";	
+		}
+		
+		
 	}
 
 	public String updatePost(Post post) {
@@ -170,7 +189,7 @@ public class SearchPost {
 		PostController controller = new PostController();
 		controller.deletePost(form.getPost());
 		reset();
-		
+
 		postDeleted = true;
 		message.setSummary(" post was sucessfully deleted ");
 		message.setSeverity(FacesMessage.SEVERITY_INFO);
