@@ -38,6 +38,10 @@
 					<f:facet name="header">Title</f:facet> #{post.title}</h:column>
 				<h:column>
 					<f:facet name="header">Text</f:facet> #{post.text}</h:column>
+
+				<h:column>
+					<f:facet name="header">Author</f:facet> #{post.author}</h:column>
+
 				<h:column>
 
 					<h:commandLink title="Update" type="submit"
@@ -55,6 +59,25 @@
 				</h:column>
 
 			</h:dataTable>
+			
+			#{searchPost.pages}
+			
+			
+			<!-- <ui:remove>&laquo; é de escape, ele coloca as micro sentinha na numeração =)  <li><a href="#">#{page}</a></li> saiu do ui:repet</ui:remove> -->
+			
+
+			<ul class="pager">
+				<li><a href="#">&laquo;</a></li>
+				<ui:repeat value="#{searchPost.pages}" var="page">
+					
+					<li><h:commandLink value="#{page}" action="#{searchPost.goToPage(page)}"></h:commandLink></li>
+
+				</ui:repeat>
+				
+				<li><a href="#">&raquo;</a></li>
+
+			</ul>
+
 
 		</h:form>
 

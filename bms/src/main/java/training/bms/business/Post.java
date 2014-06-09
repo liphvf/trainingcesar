@@ -13,6 +13,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -31,6 +32,7 @@ public class Post {
 	// usa para definir o nome de uma coluna, o comando é diferente pois são
 	// relacionamento diferentes
 	@JoinColumn(name = "BLOG_ID")
+	@NotNull
 	public Blog getBlog() {
 		return blog;
 	}

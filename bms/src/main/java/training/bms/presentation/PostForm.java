@@ -2,6 +2,8 @@ package training.bms.presentation;
 
 import java.util.List;
 
+import javax.validation.constraints.Size;
+
 import training.bms.business.Blog;
 import training.bms.business.BlogController;
 import training.bms.business.BlogSearchOptions;

@@ -33,6 +33,11 @@ public class PostController {
 
 		return dao.searchPost(options);
 	}
+	
+	public Integer searchPostCount(PostSearchOptions options) {
+
+		return dao.searchPostCount(options);
+	}
 
 	public void deletePost(Post post) {
 

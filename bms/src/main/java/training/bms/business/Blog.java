@@ -42,7 +42,7 @@ public class Blog {
 
 	// SE TIVER UM CAMPO NO BANCO COM DESCRIÇÃO FICA DS
 	@Size(min = 1, max = 1000)
-	@Column(name = "BLO_DS")
+	@Column(name = "BLOG_DS")
 	public String getDescription() {
 		return description;
 	}
