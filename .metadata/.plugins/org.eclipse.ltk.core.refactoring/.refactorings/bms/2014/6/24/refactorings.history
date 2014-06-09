@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 4 elements to &apos;post&apos;&#x0A;- Original project: &apos;bms&apos;&#x0A;- Destination element: &apos;post&apos;&#x0A;- Original elements:&#x0A;     deletePost.xhtml&#x0A;     searchPost.xhtml&#x0A;     newPost.xhtml&#x0A;     updatePost.xhtml&#x0A;- Update references to refactored element" description="Move files" element1="src/main/webapp/blog/deletePost.xhtml" element2="src/main/webapp/blog/searchPost.xhtml" element3="src/main/webapp/blog/newPost.xhtml" element4="src/main/webapp/blog/updatePost.xhtml" files="4" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1402198468161" target="src/main/webapp/post" units="0" version="1.0"/>
+</session>
