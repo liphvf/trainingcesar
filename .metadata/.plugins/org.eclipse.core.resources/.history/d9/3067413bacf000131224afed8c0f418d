@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:bms="http://java.sun.com/jsf/composite/bms">
+<ui:composition template="/templatepost.xhtml">
+	<ui:define name="content">
+
+		<h:form id="form" styleClass="form-horizontal">
+
+			<h1>Search Post</h1>
+
+
+			<bms:searchpost options="#{searchPost.options}" id="searchPost"></bms:searchpost>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<h:commandButton type="submit" styleClass="btn btn-primary"
+						value="Search" action="#{searchPost.search}" />
+				</div>
+			</div>
+
+			<h:messages />
+
+		</h:form>
+
+		<h:form>
+
+
+
+			<h:dataTable value="#{searchPost.result}" var="post"
+				styleClass="table table-striped table-bordered table-condensed table-hover"
+				columnClasses="col-sm-0,col-sm-6,col-sm-6,col-sm-0,col-sm-0"
+				rendered="#{searchPost.result.isEmpty() == false}">
+				<h:column>
+					<f:facet name="header">ID</f:facet> #{post.id}</h:column>
+				<h:column>
+					<f:facet name="header">Title</f:facet> #{post.title}</h:column>
+				<h:column>
+					<f:facet name="header">Text</f:facet> #{post.text}</h:column>
+
+				<h:column>
+					<f:facet name="header">Author</f:facet> #{post.author}</h:column>
+
+				<h:column>
+
+					<h:commandLink title="Update" type="submit"
+						styleClass="btn btn-primary glyphicon glyphicon-pencil"
+						action="#{searchPost.updatePost(post)}" />
+
+				</h:column>
+
+				<h:column>
+
+					<h:commandLink title="Delete" type="submit"
+						styleClass="btn btn-danger glyphicon glyphicon-trash"
+						action="#{searchPost.deletePost(post)}" />
+
+				</h:column>
+
+			</h:dataTable>
+
+			<ui:remove>#{searchPost.pages}</ui:remove>
+
+
+			<!-- <ui:remove>&laquo; é de escape, ele coloca as micro sentinha na numeração =) <li><a href="#">#{page}</a></li> saiu do ui:repet</ui:remove> -->
+
+
+
+
+			<center>
+				<ul class="pagination">
+					<li><a href="#">&laquo;</a></li>
+					<ui:repeat value="#{searchPost.pages}" var="page">
+
+						<!-- <ui:remove>#{page == searchPost.page ? 'active' : ''} funciona perfeitamento </ui:remove> -->
+						<li class="#{searchPost.getPageClass(page)}"><h:commandLink
+								value="#{page}" action="#{searchPost.goToPage(page)}">
+
+								<f:ajax render="@form"></f:ajax>
+
+							</h:commandLink></li>
+
+					</ui:repeat>
+
+					<li class="#{searchPost.getPageClass(page)}"><h:commandLink
+								value="&raquo;" action="#{searchPost.goToPage(page+1)}">
+
+							</h:commandLink></li>
+
+				</ul>
+			</center>
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+
+</html>

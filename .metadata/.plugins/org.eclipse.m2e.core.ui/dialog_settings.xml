@@ -79,6 +79,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="osms"/>
 			<item value="OSMS"/>
 			<item value="treinamento"/>
 			<item value="bms"/>
