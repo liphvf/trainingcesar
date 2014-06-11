@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="847" key="dialogWidth"/>
-		<item value="474" key="dialogHeight"/>
+		<item value="811" key="dialogWidth"/>
+		<item value="438" key="dialogHeight"/>
 		<list key="orderedProviders">
+			<item value="org.eclipse.ui.commands"/>
+			<item value="org.eclipse.ui.actions"/>
 		</list>
 		<list key="textArray">
+			<item value="tostr"/>
+			<item value="get"/>
 		</list>
 		<list key="orderedElements">
+			<item value="org.eclipse.jdt.ui.edit.text.java.generate.tostring"/>
+			<item value="org.eclipse.jdt.ui.actions.GenerateGetterSetter"/>
 		</list>
 		<list key="textEntries">
+			<item value="1"/>
+			<item value="1"/>
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
@@ -17,21 +25,24 @@
 		<item value="81" key="DIALOG_X_ORIGIN"/>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.m2e.core.wizards.Maven2ProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.wst.html.ui.internal.wizard.NewHTMLWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.eclipse.m2e"/>
+			<item value="org.eclipse.pde.userAssistance"/>
+			<item value="org.eclipse.wst.web.ui"/>
+			<item value="org.eclipse.jst.ws.ui.new"/>
+			<item value="org.eclipse.jst.ws.ui.new/org.eclipse.jst.ws.jaxws.ui.wizards.category"/>
 		</list>
 	</section>
 	<section name="FileExtensionDialogSettings">
 		<item value="438" key="DIALOG_WIDTH"/>
 		<item value="184" key="DIALOG_Y_ORIGIN"/>
-		<item value="300" key="DIALOG_HEIGHT"/>
 		<item value="120" key="DIALOG_X_ORIGIN"/>
+		<item value="300" key="DIALOG_HEIGHT"/>
 		<item value="1|Source Sans Pro|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
-	<section name="EditorSelectionDialog">
-	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
+	</section>
+	<section name="EditorSelectionDialog">
 	</section>
 	<section name="ImportExportAction">
 		<item value="org.eclipse.m2e.core.wizards.Maven2ImportWizard" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>

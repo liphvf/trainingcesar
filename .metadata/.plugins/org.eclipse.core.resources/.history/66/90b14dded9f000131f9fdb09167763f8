@@ -1,0 +1,10 @@
+package training.osms.presentation;
+
+public class NewCategory {
+	
+	private String name;
+	private String description;
+	
+	
+
+}

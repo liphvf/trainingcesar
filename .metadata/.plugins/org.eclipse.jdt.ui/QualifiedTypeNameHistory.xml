@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.sql.Array"/>
 <fullyQualifiedTypeName name="treinamento.IteratorImpl"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="training.bms.presentation.NewBlog"/>
@@ -38,7 +37,6 @@
 <fullyQualifiedTypeName name="org.easymock.EasyMock"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
 <fullyQualifiedTypeName name="training.bms.business.BlogController"/>
 <fullyQualifiedTypeName name="training.bms.business.Blog"/>
 <fullyQualifiedTypeName name="training.bms.business.BlogSearchOptions"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="training.osms.business.Category"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,20 @@
+package training.osms.presentation;
+
+import training.osms.business.Category;
+
+public class NewCategory {
+	
+	private Category category;
+
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+	
+	
+	
+
+}
