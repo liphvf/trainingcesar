@@ -1,0 +1,31 @@
+package training.bms.presentation;
+
+import javax.faces.bean.ManagedBean;
+
+import training.bms.business.Blog;
+import training.bms.business.BlogController;
+
+
+@ManagedBean
+public class ShowBlog {
+	
+	private Blog blog;
+	private int blogId;
+
+	public Blog getBlog() {
+		return blog;
+	}
+
+	public void setBlog(Blog blog) {
+		this.blog = blog;
+		
+		BlogController controller = new BlogController();
+		
+		this.blog = controller.searchBlog(blogId);
+	}
+	
+
+	
+	
+
+}

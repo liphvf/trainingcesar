@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="treinamento.IteratorImpl"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="training.bms.presentation.NewBlog"/>
 <fullyQualifiedTypeName name="treinamento.irpf.Tabela"/>
 <fullyQualifiedTypeName name="treinamento.irpf.Calculadora"/>
@@ -37,9 +35,6 @@
 <fullyQualifiedTypeName name="org.easymock.EasyMock"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
 <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
-<fullyQualifiedTypeName name="training.bms.business.BlogController"/>
-<fullyQualifiedTypeName name="training.bms.business.Blog"/>
-<fullyQualifiedTypeName name="training.bms.business.BlogSearchOptions"/>
 <fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
 <fullyQualifiedTypeName name="training.bms.presentation.SearchBlog"/>
 <fullyQualifiedTypeName name="training.bms.persistence.PostDao"/>
@@ -52,12 +47,17 @@
 <fullyQualifiedTypeName name="training.bms.business.Post"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.util.Calendar"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
 <fullyQualifiedTypeName name="training.bms.presentation.PostForm"/>
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
 <fullyQualifiedTypeName name="training.osms.business.Category"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="training.bms.business.Blog"/>
+<fullyQualifiedTypeName name="javax.sound.midi.ControllerEventListener"/>
+<fullyQualifiedTypeName name="training.bms.business.BlogControllerTest"/>
+<fullyQualifiedTypeName name="training.bms.business.BlogController"/>
+<fullyQualifiedTypeName name="training.bms.business.BlogSearchOptions"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

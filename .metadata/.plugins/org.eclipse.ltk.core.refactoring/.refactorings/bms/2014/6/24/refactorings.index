@@ -2,3 +2,8 @@
 1402428242867	Copy compilation units
 1402430566191	Copy folder
 1402430596169	Copy folder
+1402576070211	Copy file
+1402576080457	Rename resource 'template.xhtml'
+1402576400152	Rename resource 'showBlogxhtml'
+1402665055289	Extract method 'toPredicate'
+1402668266094	Extract method 'setParameters'

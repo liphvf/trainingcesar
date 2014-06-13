@@ -1,0 +1,17 @@
+package training.bms.presentation;
+
+public class ShowBlog {
+	
+	private int blogId;
+
+	public int getBlogId() {
+		return blogId;
+	}
+
+	public void setBlogId(int blogId) {
+		this.blogId = blogId;
+	}
+	
+	
+
+}
