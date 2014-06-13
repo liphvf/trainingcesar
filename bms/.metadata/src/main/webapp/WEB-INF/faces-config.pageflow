@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14011048176300" configfile="/bms/src/main/webapp/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="370" id="pf14011048536241" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf14011048536242 pf14012025796400 pf14012025796401" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="370" id="pf14011048536241" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14011048536242 pf14012025796400 pf14012025796401 pf14025743914050" path="*"/>
   <nodes xsi:type="pageflow:PFPage" name="blog/updateBlog.xhtml" x="338" y="178" id="pf14011048536243" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14011048536242" path="/blog/updateBlog.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="blog/deleteBlog.xhtml" x="338" y="562" id="pf14012025796402" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf14012025796400" path="/blog/deleteBlog.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="blog/deleteBlog.xhtml" x="338" y="562" id="pf14012025796402" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14012025796400" path="/blog/deleteBlog.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="blog/searchBlog.xhtml" id="pf14012025796413" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf14012025796401" path="/blog/searchBlog.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="post/updatePost.xhtml" id="pf14025743914051" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14025743914050" path="/post/updatePost.xhtml"/>
   <links id="pf14011048536242" target="pf14011048536243" source="pf14011048536241" outcome="updateBlog"/>
   <links id="pf14012025796400" target="pf14012025796402" source="pf14011048536241" outcome="deleteBlog"/>
   <links id="pf14012025796401" target="pf14012025796413" source="pf14011048536241" outcome="searchBlog"/>
+  <links id="pf14025743914050" target="pf14025743914051" source="pf14011048536241" outcome="updatePost" redirect="true"/>
 </pageflow:Pageflow>

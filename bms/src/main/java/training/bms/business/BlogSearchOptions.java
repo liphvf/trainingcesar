@@ -4,6 +4,7 @@ public class BlogSearchOptions {
 
 	private String name;
 	private String description;
+	private Integer Id;
 
 	public BlogSearchOptions() {
 	}
@@ -29,5 +30,18 @@ public class BlogSearchOptions {
 		return "BlogSearchOptions [name=" + name + ", description="
 				+ description + "]";
 	}
+
+	public Integer getId() {
+		return Id;
+	}
+
+	public void setId(Integer id) {
+		Id = id;
+	}
+
+
+
+	
+	
 
 }

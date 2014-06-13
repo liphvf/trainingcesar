@@ -81,6 +81,12 @@ public class BlogDao {
 		// preocupar com o and.
 		// exemplo, se não colocar ele ficaria um and na frente sem ter nada
 		// para o and, e daria problema.
+		if (options.getId() != null ) {
+			predicate.append(" and blog.id = :blogId");
+
+		}
+		
+		
 		if (options.getName() != null && options.getName().length() > 0) {
 			predicate.append(" and upper(blog.name) like :blogName");
 
@@ -98,6 +104,12 @@ public class BlogDao {
 
 		TypedQuery<Blog> query = manager.createQuery(
 				"select blog from Blog blog where " + predicate, Blog.class);
+		
+		
+		if (options.getId() != null ) {
+			query.setParameter("blogId", + options.getId() );
+
+		}
 
 		if (options.getName() != null && options.getName().length() > 0) {
 			query.setParameter("blogName", "%"

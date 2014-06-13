@@ -37,6 +37,16 @@
 	</navigation-rule>
 	
 	
+	
+		<navigation-rule>
+		<from-view-id>*</from-view-id>
+		<navigation-case>
+			<from-outcome>updatePost</from-outcome>
+			<to-view-id>/post/updatePost.xhtml</to-view-id>
+			<redirect></redirect>
+		</navigation-case>
+	</navigation-rule>
+	
 </faces-config>
 
 <!-- existe 2 maneira de interação foward (default) e redirect -->
