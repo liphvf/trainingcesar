@@ -7,7 +7,7 @@
 	xmlns:bms="http://java.sun.com/jsf/composite/bms">
 
 <f:metadata>
-<f:viewParam name="blogId" value="#{showBlog.blogId}"></f:viewParam>
+	<f:viewParam name="blogId" value="#{showBlog.blogId}"></f:viewParam>
 
 
 </f:metadata>
@@ -26,8 +26,18 @@
 </head>
 <body>
 
+	<ul>
+		#{showBlog.blog} #{showBlog.posts}
+		<br /> Nome do blog: #{showBlog.blog.name}
+		<ui:repeat var="post" value="#{showBlog.posts}">
+			<li><a href="/bms/faces/public/showPost.xhtml?postId#{post.id}">
+					#{post.title}</a></li>
+
+		</ui:repeat>
 
 
-#{showBlog.blog}
+	</ul>
+
+
 </body>
 </html>

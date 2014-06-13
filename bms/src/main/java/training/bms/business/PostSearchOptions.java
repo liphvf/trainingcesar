@@ -3,6 +3,30 @@ package training.bms.business;
 import java.util.Date;
 
 public class PostSearchOptions {
+	
+	public PostSearchOptions () {
+		// deixa esse como default,
+		order = Order.TITLE;
+	}
+
+	public enum Order {
+		TITLE("title"), DATE("date");
+
+		private String value;
+
+		private Order(String value) {
+			this.value = value;
+		}
+
+		public String getValue() {
+			return value;
+		}
+
+		public void setValue(String value) {
+			this.value = value;
+		}
+
+	}
 
 	private Integer id;
 	private String title;
@@ -11,6 +35,34 @@ public class PostSearchOptions {
 	private String author;
 	private Integer StartPosition;
 	private Integer MaxResults;
+	private boolean desc;
+	private Order order;
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+
+	public boolean isDesc() {
+		return desc;
+	}
+
+	public void setDesc(boolean desc) {
+		this.desc = desc;
+	}
+
+	private Integer blogId;
+
+	public Integer getBlogId() {
+		return blogId;
+	}
+
+	public void setBlogId(Integer blogId) {
+		this.blogId = blogId;
+	}
 
 	public Integer getId() {
 		return id;
@@ -52,7 +104,6 @@ public class PostSearchOptions {
 		this.author = author;
 	}
 
-
 	public Integer getStartPosition() {
 		return StartPosition;
 	}
@@ -69,7 +120,4 @@ public class PostSearchOptions {
 		MaxResults = maxResults;
 	}
 
-	
-	
-	
 }
