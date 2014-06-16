@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;showBlog.xhtml&apos; to &apos;showBlog.xhtml&apos;&#x0A;- Original project: &apos;bms&apos;&#x0A;- Destination element: &apos;showBlog.xhtml&apos;&#x0A;- Original element: &apos;showBlog.xhtml&apos;" description="Copy file" element1="src/main/webapp/public/showBlog.xhtml" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1402924372743" target="/bms/src/main/webapp/public/showBlog.xhtml" units="0" version="1.0"/>
+</session>

@@ -38,7 +38,6 @@ public class PostSearchOptions {
 	private Integer MaxResults;
 	private boolean desc;
 	private Order order;
-	private Integer postId;
 
 	public Order getOrder() {
 		return order;
@@ -121,15 +120,5 @@ public class PostSearchOptions {
 	public void setMaxResults(Integer maxResults) {
 		MaxResults = maxResults;
 	}
-
-	public Integer getPostId() {
-		return postId;
-	}
-
-	public void setPostId(Integer postId) {
-		this.postId = postId;
-	}
-
-
 
 }

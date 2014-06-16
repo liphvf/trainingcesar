@@ -26,17 +26,8 @@
 </head>
 <body>
 
-	<ul>
-		#{showBlog.blog} #{showBlog.posts}
-		<br /> Nome do blog: #{showBlog.blog.name}
-		<ui:repeat var="post" value="#{showBlog.posts}">
-			<li><a href="/bms/faces/public/showPost.xhtml?postId=#{post.id}">
-					#{post.title}</a></li>
 
-		</ui:repeat>
-
-
-	</ul>
+#{showPost.postId}
 
 
 </body>

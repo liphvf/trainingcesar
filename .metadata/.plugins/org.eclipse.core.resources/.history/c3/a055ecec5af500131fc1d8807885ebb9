@@ -66,10 +66,6 @@ public class PostDao {
 
 	private StringBuilder toPredicate(PostSearchOptions options) {
 		StringBuilder predicate = new StringBuilder("1=1");
-		
-		if (options.getPostId() != null) {
-			predicate.append(" and post.id = :PostId");
-		}
 
 		if (options.getBlogId() != null) {
 			predicate.append(" and post.blog.id = :blogId");
@@ -164,10 +160,6 @@ public class PostDao {
 
 		if (options.getBlogId() != null) {
 			query.setParameter("blogId", options.getBlogId());
-		}
-		
-		if (options.getPostId() != null) {
-			query.setParameter("postId", options.getBlogId());
 		}
 	}
 
