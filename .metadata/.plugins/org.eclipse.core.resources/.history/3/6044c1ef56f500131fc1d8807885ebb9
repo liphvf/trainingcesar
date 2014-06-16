@@ -188,7 +188,6 @@ public class PostDao {
 		manager.merge(post);
 
 		transaction.commit();
-		
 
 	}
 
