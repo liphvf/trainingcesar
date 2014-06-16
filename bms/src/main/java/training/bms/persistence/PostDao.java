@@ -68,7 +68,7 @@ public class PostDao {
 		StringBuilder predicate = new StringBuilder("1=1");
 		
 		if (options.getPostId() != null) {
-			predicate.append(" and post.id = :PostId");
+			predicate.append(" and post.id = :postId");
 		}
 
 		if (options.getBlogId() != null) {
@@ -167,7 +167,7 @@ public class PostDao {
 		}
 		
 		if (options.getPostId() != null) {
-			query.setParameter("postId", options.getBlogId());
+			query.setParameter("postId", options.getPostId());
 		}
 	}
 
