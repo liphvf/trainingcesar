@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="training.bms.presentation.NewBlog"/>
-<fullyQualifiedTypeName name="treinamento.irpf.Tabela"/>
-<fullyQualifiedTypeName name="treinamento.irpf.Calculadora"/>
 <fullyQualifiedTypeName name="javax.management.RuntimeErrorException"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
 <fullyQualifiedTypeName name="java.util.Locale.Category"/>
@@ -34,7 +31,6 @@
 <fullyQualifiedTypeName name="training.bms.persistence.BlogDao"/>
 <fullyQualifiedTypeName name="org.easymock.EasyMock"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
-<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 <fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
 <fullyQualifiedTypeName name="training.bms.presentation.SearchBlog"/>
 <fullyQualifiedTypeName name="training.bms.persistence.PostDao"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="training.bms.business.BlogController"/>
 <fullyQualifiedTypeName name="training.bms.business.BlogSearchOptions"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.sun.faces.facelets.util.Classpath.SearchAdvice"/>
+<fullyQualifiedTypeName name="training.bms.business.PostSearchOptions.Order"/>
+<fullyQualifiedTypeName name="training.bms.business.PostSearchOptions"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 </qualifiedTypeNameHistroy>
