@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
 import training.bms.business.Post;
 import training.bms.business.PostController;
 import training.bms.business.PostSearchOptions;
@@ -44,6 +46,24 @@ public class ShowPost {
 		this.postId = postId;
 	}
 	
+	public String getText() {
+	
+		
+		StringBuilder text = new StringBuilder();
+		text.append("<p>");
+		for (int i = 0; i < post.getText().length(); i++) {
+			char c = post.getText().charAt(i);
+			if (c == '\n' || c == '\r') {
+				text.append("</p> <p>");
+			} else {
+				text.append(c);
+			}
+		}
+		
+		text.append("</p>");
+		
+		return text.toString();
+	}
 	
 	
 	

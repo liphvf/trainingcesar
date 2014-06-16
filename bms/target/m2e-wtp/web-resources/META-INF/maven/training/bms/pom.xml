@@ -55,6 +55,14 @@
 			<version>2.2.2</version>
 		</dependency>
 
+		<!-- commons lang, biblioteca para fazer o scaping no caso do html XSS  -->
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.6</version>
+		</dependency>
+
+
 	</dependencies>
 
 

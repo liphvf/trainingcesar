@@ -26,12 +26,17 @@
 </head>
 <body>
 
-<div class="container">
-<h1 class="page-header">
-#{showPost.post.blog.name}
-</h1>
-#{showPost.post}
-</div>
+	<div class="container" style="text-align: justify;">
+		<h1 class="page-header">#{showPost.post.blog.name}</h1>
+		#{showPost.post.title}
+		
+		<div>
+		<h:outputText value="#{showPost.text}" escape="false">
+				
+		</h:outputText>
+		
+		</div>
+	</div>
 
 
 
