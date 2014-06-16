@@ -48,11 +48,12 @@ public class ShowPost {
 	
 	public String getText() {
 	
+		String escapedText =  StringEscapeUtils.escapeHtml(post.getText());
 		
 		StringBuilder text = new StringBuilder();
 		text.append("<p>");
-		for (int i = 0; i < post.getText().length(); i++) {
-			char c = post.getText().charAt(i);
+		for (int i = 0; i < escapedText.length(); i++) {
+			char c = escapedText.charAt(i);
 			if (c == '\n' || c == '\r') {
 				text.append("</p> <p>");
 			} else {
