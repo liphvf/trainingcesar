@@ -9,14 +9,13 @@ import org.apache.commons.lang.StringEscapeUtils;
 import training.bms.business.Post;
 import training.bms.business.PostController;
 import training.bms.business.PostSearchOptions;
+
 //control + shift + o
 @ManagedBean
 public class ShowPost {
 
 	private int postId;
 	private Post post;
-	
-	
 
 	public Post getPost() {
 		return post;
@@ -28,7 +27,7 @@ public class ShowPost {
 
 	public int getPostId() {
 		return postId;
-		
+
 	}
 
 	public void setPostId(int postId) {
@@ -36,36 +35,27 @@ public class ShowPost {
 		options.setPostId(postId);
 		PostController controller = new PostController();
 		List<Post> posts = controller.searchPost(options);
-		
+
 		if (posts.size() > 0) {
 			post = posts.get(0);
-			
+
 		}
-		
-		
+
 		this.postId = postId;
 	}
-	
+
 	public String getText() {
-	
-		String escapedText =  StringEscapeUtils.escapeHtml(post.getText());
-		
+
+		String escapedText = StringEscapeUtils.escapeHtml(post.getText());
+
 		StringBuilder text = new StringBuilder();
+
 		text.append("<p>");
-		for (int i = 0; i < escapedText.length(); i++) {
-			char c = escapedText.charAt(i);
-			if (c == '\n' || c == '\r') {
-				text.append("</p> <p>");
-			} else {
-				text.append(c);
-			}
-		}
-		
+		escapedText= escapedText.replaceAll("[(\\n\\r)(\\n)(\\r)]+", "</p><p>");
+		text.append(escapedText);
 		text.append("</p>");
-		
+
 		return text.toString();
 	}
-	
-	
-	
+
 }

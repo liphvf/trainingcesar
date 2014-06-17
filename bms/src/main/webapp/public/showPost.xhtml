@@ -27,14 +27,17 @@
 <body>
 
 	<div class="container" style="text-align: justify;">
-		<h1 class="page-header">#{showPost.post.blog.name}</h1>
+		<h1 class="page-header">
+			<a href="showBlog.xhtml?blogId=#{showPost.post.blog.id}">
+				#{showPost.post.blog.name} </a>
+		</h1>
 		#{showPost.post.title}
-		
+
 		<div>
-		<h:outputText value="#{showPost.text}" escape="false">
-				
-		</h:outputText>
-		
+			<h:outputText value="#{showPost.text}" escape="false">
+
+			</h:outputText>
+
 		</div>
 	</div>
 

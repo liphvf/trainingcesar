@@ -61,4 +61,21 @@ public class ShowBlog {
 		}
 	}
 
+	public String getPostTextPreview(Post post) {
+		StringBuilder builder = new StringBuilder();
+
+		for (int i = 0; i < post.getText().length(); i++) {
+			char c = post.getText().charAt(i);
+
+			if (c == '\n' || c == '\r') {
+				break;
+			} else {
+				builder.append(c);
+			}
+
+		}
+
+		return builder.toString();
+	}
+
 }
