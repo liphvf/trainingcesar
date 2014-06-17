@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="184" key="DIALOG_Y_ORIGIN"/>
+		<item value="380" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="false" key="ShowDerived"/>
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0A;&lt;History&gt;&#x0A;&lt;historyRootNode&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/util/RunDatabase.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/util/CreateDatabase.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/post/updatePost.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/post/deletePost.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/business/Blog.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/post/newPost.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/business/PostController.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/post/searchPost.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/template.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/templatepost.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/presentation/SearchPost.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/blog/newBlog.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/resources/bms/blog.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/WEB-INF/faces-config.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/persistence/BlogDao.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/resources/META-INF/persistence.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/webapp/public/showBlog.xhtml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/presentation/ShowBlog.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/business/PostSearchOptions.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/persistence/PostDao.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/src/main/java/training/bms/business/Post.java&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;infoNode path=&quot;/bms/pom.xml&quot; type=&quot;1&quot;/&gt;&#x0A;&lt;/historyRootNode&gt;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="619" key="DIALOG_WIDTH"/>
+			<item value="40" key="DIALOG_Y_ORIGIN"/>
+			<item value="374" key="DIALOG_X_ORIGIN"/>
+			<item value="673" key="DIALOG_HEIGHT"/>
+			<item value="1|Cantarell|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/liphvf/Downloads/Professor/Projects/myirpf"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="CleanDialogSettings">
+		<item value="405" key="DIALOG_WIDTH"/>
+		<item value="137" key="DIALOG_Y_ORIGIN"/>
+		<item value="371" key="DIALOG_HEIGHT"/>
+		<item value="500" key="DIALOG_X_ORIGIN"/>
+		<item value="false" key="TOGGLE_SELECTED"/>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.eclipse.m2e.core.wizards.Maven2ProjectWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.m2e"/>
+		</list>
+	</section>
+</section>
