@@ -1,14 +1,17 @@
 package training.bms.business;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
-import javax.annotation.Generated;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -18,7 +21,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 // to colocando o nome da tabela.
-@Table(name = "POST_POST")
+@Table(name = "POS_POST")
 public class Post {
 	private Integer id;
 	private String title;
@@ -26,6 +29,12 @@ public class Post {
 	private Date date;
 	private String author;
 	private Blog blog;
+	private List<Tag> tags;
+	
+	public Post() {
+
+	tags = new ArrayList<>();
+	}
 
 	// represente um tipo de relacionamento de muitos para 1.
 	@ManyToOne
@@ -91,4 +100,16 @@ public class Post {
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
+	@ManyToMany
+	@JoinTable(name = "POT_POST_TAG", joinColumns = @JoinColumn(name = "POS_ID"), inverseJoinColumns = @JoinColumn(name = "TAG_ID"))
+	// o nome da coluna que aponta a entidade post
+	public List<Tag> getTags() {
+		return tags;
+	}
+
+	public void setTags(List<Tag> tags) {
+		this.tags = tags;
+	}
+
 }
