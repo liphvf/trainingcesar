@@ -142,6 +142,11 @@ public class SearchPost {
 	public String updatePost(Post post) {
 
 		Post postAux = new Post();
+		postAux.setId(post.getId());
+		postAux.setTitle(post.getTitle());
+		postAux.setText(post.getText());
+		postAux.setAuthor(post.getAuthor());
+		postAux.setDate(post.getDate());
 		this.form = new PostForm();
 		this.form.setPost(postAux);
 
