@@ -1,0 +1,21 @@
+package training.bms.persistence;
+
+import training.bms.business.Tag;
+
+public class TagDao {
+
+	
+	
+	public void insertTag(Tag tags) {
+		
+	}
+
+	public void deleteTag(Tag tags) {
+		
+	}
+
+	public void updateTag(Tag tags) {
+		
+	}
+
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:bms="http://java.sun.com/jsf/composite/bms">
+<ui:composition template="/templateTag.xhtml">
+
+	<ui:define name="content">
+
+		<h:form id="form" styleClass="form-horizontal">
+
+			<h1>New Post</h1>
+
+
+
+			<bms:tag tag="#{newTag.tag}" id="tag">
+
+				<f:facet name="buttons">
+
+					<h:commandButton type="submit" styleClass="btn btn-primary"
+						value="Save" action="#{newTag.saveTag}" />
+
+
+				</f:facet>
+
+			</bms:tag>
+
+
+			<ui:repeat value="#{searchPost.pages}" var="page">
+				<div class="form-group">
+					<label class="col-sm-2 control-label">Posts</label> <label
+						class="checkbox-inline"> <input type="checkbox"
+						id="inlineCheckbox1" value="option1"> 1 </input>
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						id="inlineCheckbox2" value="option2"> 2</input>
+					</label> <label class="checkbox-inline"> <input type="checkbox"
+						id="inlineCheckbox3" value="option3"> 3</input>
+					</label>
+
+				</div>
+			</ui:repeat>
+
+
+
+
+			<h:messages />
+
+		</h:form>
+
+	</ui:define>
+</ui:composition>
+
+</html>

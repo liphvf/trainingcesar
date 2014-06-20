@@ -1,0 +1,53 @@
+package training.bms.presentation;
+
+import java.util.ArrayList;
+
+import javax.faces.bean.ManagedBean;
+
+import training.bms.business.Post;
+import training.bms.business.Tag;
+import training.bms.business.TagController;
+
+@ManagedBean
+public class NewTag {
+
+	private Tag tag;
+	private ArrayList<Post> posts;
+
+	public NewTag() {
+		tag = new Tag();
+		posts = new ArrayList<>();  
+	}
+
+	public Tag getTag() {
+		return tag;
+	}
+
+	public void setTag(Tag tag) {
+		this.tag = tag;
+	}
+
+	public void saveTag(Tag tag) {
+
+		TagController controller = new TagController();
+
+		controller.saveTag(tag);
+	}
+
+	public ArrayList<Post> getPosts() {
+		return posts;
+	}
+
+	public void setPosts(ArrayList<Post> posts) {
+		this.posts = posts;
+	}
+
+	
+
+//	public void setPostCount(int postCount) {
+//		TagController controller = new TagController();
+//
+//		this.postCount = controller.postCount();
+//	}
+
+}

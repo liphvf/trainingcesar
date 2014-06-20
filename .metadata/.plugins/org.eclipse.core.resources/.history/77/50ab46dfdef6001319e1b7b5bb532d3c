@@ -1,0 +1,24 @@
+package training.bms.business;
+
+import training.bms.persistence.TagDao;
+
+public class TagController {
+	
+	private TagDao dao;
+	
+	public TagController() {
+
+		dao = new TagDao();
+	}
+
+	public TagDao getDao() {
+		return dao;
+	}
+
+	public void setDao(TagDao dao) {
+		this.dao = dao;
+	}
+
+	
+	
+}

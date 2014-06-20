@@ -1,0 +1,5 @@
+package training.bms.business;
+
+public class TagController {
+
+}

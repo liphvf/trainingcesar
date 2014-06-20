@@ -1,0 +1,31 @@
+package training.bms.persistence;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+
+import training.bms.business.Tag;
+
+public class TagDao {
+
+	
+	
+	public void insertTag(Tag tag) {
+		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
+		EntityManager manager = factory.createEntityManager();
+		EntityTransaction transaction = manager.getTransaction();
+		transaction.begin();
+		manager.persist(tag);
+		transaction.commit();
+		
+	}
+
+	public void deleteTag(Tag tags) {
+		
+	}
+
+	public void updateTag(Tag tags) {
+		
+	}
+
+}

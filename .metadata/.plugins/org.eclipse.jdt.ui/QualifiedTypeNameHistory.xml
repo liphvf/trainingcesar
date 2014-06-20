@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="training.loja.business.CategoryController"/>
-<fullyQualifiedTypeName name="org.junit.Assert"/>
-<fullyQualifiedTypeName name="org.dom4j.tree.BackedList"/>
-<fullyQualifiedTypeName name="javax.annotation.Generated"/>
-<fullyQualifiedTypeName name="javax.persistence.GeneratedValue"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
 <fullyQualifiedTypeName name="javax.management.Query"/>
 <fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="training.bms.presentation.EntityManagerFactoryHolder"/>
 <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
 <fullyQualifiedTypeName name="javax.faces.application.FacesMessage"/>
-<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
 <fullyQualifiedTypeName name="javax.persistence.Persistence"/>
 <fullyQualifiedTypeName name="training.osms.persistence.EntityManagerFactoryHolder"/>
 <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
-<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
-<fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
 <fullyQualifiedTypeName name="training.bms.business.BusinessException"/>
 <fullyQualifiedTypeName name="org.jboss.logging.annotations.MessageBundle"/>
@@ -26,7 +18,6 @@
 <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
 <fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
 <fullyQualifiedTypeName name="training.bms.presentation.SearchBlog"/>
-<fullyQualifiedTypeName name="training.bms.persistence.PostDao"/>
 <fullyQualifiedTypeName name="javax.persistence.Temporal"/>
 <fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.ForeignKey"/>
@@ -45,9 +36,7 @@
 <fullyQualifiedTypeName name="training.bms.business.BlogSearchOptions"/>
 <fullyQualifiedTypeName name="com.sun.faces.facelets.util.Classpath.SearchAdvice"/>
 <fullyQualifiedTypeName name="training.bms.business.PostSearchOptions.Order"/>
-<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
 <fullyQualifiedTypeName name="training.bms.business.Post"/>
-<fullyQualifiedTypeName name="training.bms.business.PostSearchOptions"/>
 <fullyQualifiedTypeName name="training.bms.business.PostController"/>
 <fullyQualifiedTypeName name="antlr.collections.List"/>
 <fullyQualifiedTypeName name="org.apache.commons.lang.StringEscapeUtils"/>
@@ -56,8 +45,19 @@
 <fullyQualifiedTypeName name="javax.persistence.Entity"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinTable"/>
 <fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="training.bms.persistence.TagDao"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManagerFactory"/>
+<fullyQualifiedTypeName name="training.bms.persistence.EntityManagerFactoryHolder"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityTransaction"/>
+<fullyQualifiedTypeName name="training.bms.business.PostSearchOptions"/>
+<fullyQualifiedTypeName name="training.bms.persistence.PostDao"/>
 <fullyQualifiedTypeName name="training.bms.business.Tag"/>
+<fullyQualifiedTypeName name="training.bms.business.TagController"/>
+<fullyQualifiedTypeName name="training.bms.business.TagSearchOptions"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.hibernate.mapping.Array"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

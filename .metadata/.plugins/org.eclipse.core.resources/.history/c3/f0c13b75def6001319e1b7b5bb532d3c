@@ -1,0 +1,10 @@
+package training.bms.business;
+
+import training.bms.persistence.TagDao;
+
+public class TagController {
+	
+	private TagDao dao;
+	
+
+}
