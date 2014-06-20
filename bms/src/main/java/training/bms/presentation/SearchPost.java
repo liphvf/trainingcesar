@@ -147,6 +147,7 @@ public class SearchPost {
 		postAux.setText(post.getText());
 		postAux.setAuthor(post.getAuthor());
 		postAux.setDate(post.getDate());
+		postAux.setTags(post.getTags());
 		this.form = new PostForm();
 		this.form.setPost(postAux);
 
