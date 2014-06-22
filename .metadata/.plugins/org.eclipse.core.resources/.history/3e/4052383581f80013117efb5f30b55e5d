@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:composite="http://java.sun.com/jsf/composite">
+
+
+
+<composite:interface>
+	<composite:attribute name="form"></composite:attribute>
+	<composite:attribute name="tags"></composite:attribute>
+	<composite:attribute name="disabled" default="false"></composite:attribute>
+	<composite:facet name="buttons"></composite:facet>
+</composite:interface>
+
+
+<composite:implementation>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Blog</label>
+		<div class="col-sm-10">
+			<h:selectOneMenu styleClass="form-control"
+				value="#{cc.attrs.form.blogId}">
+				<f:selectItems value="#{cc.attrs.form.blogs}" var="blog"
+					itemLabel="#{blog.name}" itemValue="#{blog.id}"></f:selectItems>
+			</h:selectOneMenu>
+		</div>
+	</div>
+
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Tags</label>
+		#{cc.attrs.form.post.tags}
+
+		<div class="col-sm-10">
+			<!-- Button trigger modal -->
+			<button class="btn btn-primary btn-lg" data-toggle="modal"
+				data-target="#myModal" onclick="return false;">Launch demo
+				modal</button>
+
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Title:</label>
+		<div class="col-sm-10">
+			<h:inputText id="tile" styleClass="form-control"
+				value="#{cc.attrs.form.post.title}" disabled="#{cc.attrs.disabled}"
+				p:placeholder="Title"></h:inputText>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Text:</label>
+		<div class="col-sm-10">
+			<h:inputTextarea styleClass="form-control" rows="10"
+				value="#{cc.attrs.form.post.text}" disabled="#{cc.attrs.disabled}"
+				p:placeholder="Text"></h:inputTextarea>
+		</div>
+	</div>
+
+
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Author</label>
+		<div class="col-sm-10">
+			<h:inputText styleClass="form-control"
+				value="#{cc.attrs.form.post.author}" disabled="#{cc.attrs.disabled}"
+				p:placeholder="Author"></h:inputText>
+		</div>
+	</div>
+
+
+	<ui:remove> ABAIXO O TOOLBAR DE Buttons</ui:remove>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<div class="btn-toolbar">
+				<composite:renderFacet name="buttons"></composite:renderFacet>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+		aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body" style="max-height: 300px; overflow: auto;">
+					<h:selectManyCheckbox value="#{cc.attrs.form.tagIds}"
+						layout="pageDirection">
+						<f:selectItems value="#{cc.attrs.form.tags}" var="tag"
+							itemLabel="#{tag.name}" itemValue="#{tag.id}"></f:selectItems>
+					</h:selectManyCheckbox>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</composite:implementation>
+
+
+
+</html>

@@ -47,26 +47,31 @@ public class PostDao {
 		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
 		EntityManager manager = factory.createEntityManager();
 
-		TypedQuery<Post> query = manager.createQuery(
-				"select post from Post post where " + predicate, Post.class);
+		try {
+			TypedQuery<Post> query = manager
+					.createQuery("select post from Post post where "
+							+ predicate, Post.class);
 
-		setParameters(options, query);
+			setParameters(options, query);
 
-		if (options.getStartPosition() != null) {
-			query.setFirstResult(options.getStartPosition());
+			if (options.getStartPosition() != null) {
+				query.setFirstResult(options.getStartPosition());
+			}
+			if (options.getMaxResults() != null) {
+				query.setMaxResults(options.getMaxResults());
+			}
+
+			List<Post> result = query.getResultList();
+
+			return result;
+		} finally {
+			manager.close();
 		}
-		if (options.getMaxResults() != null) {
-			query.setMaxResults(options.getMaxResults());
-		}
-
-		List<Post> result = query.getResultList();
-
-		return result;
 	}
 
 	private StringBuilder toPredicate(PostSearchOptions options) {
 		StringBuilder predicate = new StringBuilder("1=1");
-		
+
 		if (options.getPostId() != null) {
 			predicate.append(" and post.id = :postId");
 		}
@@ -165,7 +170,7 @@ public class PostDao {
 		if (options.getBlogId() != null) {
 			query.setParameter("blogId", options.getBlogId());
 		}
-		
+
 		if (options.getPostId() != null) {
 			query.setParameter("postId", options.getPostId());
 		}
@@ -196,7 +201,6 @@ public class PostDao {
 		manager.merge(post);
 
 		transaction.commit();
-		
 
 	}
 
