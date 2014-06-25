@@ -4,6 +4,12 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
 	version="2.2">
+
+<!-- configura o JSF para trabalhar com o Spring: delega a teferra de busca de menaged bean para o spring -->
+	<application>
+		<el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
+	</application>
+
 	<navigation-rule>
 		<!-- não importa a pagina que o usuario está vendo -->
 		<from-view-id>*</from-view-id>
@@ -15,11 +21,11 @@
 			<to-view-id>/blog/updateBlog.xhtml</to-view-id>
 
 			<!-- <redirect></redirect> -->
-			
+
 		</navigation-case>
 	</navigation-rule>
-	
-	
+
+
 	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		<navigation-case>
@@ -27,18 +33,18 @@
 			<to-view-id>/blog/deleteBlog.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
-		<navigation-rule>
+
+	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		<navigation-case>
 			<from-outcome>searchBlog</from-outcome>
 			<to-view-id>/blog/searchBlog.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
-	
-	
-	
-		<navigation-rule>
+
+
+
+	<navigation-rule>
 		<from-view-id>*</from-view-id>
 		<navigation-case>
 			<from-outcome>updatePost</from-outcome>
@@ -46,7 +52,10 @@
 			<redirect></redirect>
 		</navigation-case>
 	</navigation-rule>
-	
+
+
+
+
 </faces-config>
 
 <!-- existe 2 maneira de interação foward (default) e redirect -->
@@ -65,5 +74,5 @@
 	mudou de pagina com a nova requisição -->
 <!-- Exemplo: se no banco você fosse pagar uma conta, aperta o botão de pagar 
 	a conta e depois em seguida ele abre uma nova pagina de comfirmação de pagamento -->
-	<!-- no caso no foward ele iria pagar de novo a conta -->
-	<!-- no caso do redirect ele iria re-abrir a pagina de confirmação de pagamento	 -->
+<!-- no caso no foward ele iria pagar de novo a conta -->
+<!-- no caso do redirect ele iria re-abrir a pagina de confirmação de pagamento -->

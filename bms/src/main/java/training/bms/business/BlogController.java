@@ -4,8 +4,12 @@ import java.util.List;
 
 import javax.management.RuntimeErrorException;
 
+import org.springframework.stereotype.Component;
+
 import training.bms.persistence.BlogDao;
 
+//aqui seria para o spring poder genreciar ele.
+@Component
 public class BlogController {
 
 	public BlogController() {

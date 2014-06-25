@@ -4,8 +4,11 @@ import java.util.List;
 
 import javax.management.RuntimeErrorException;
 
+import org.springframework.stereotype.Component;
+
 import training.bms.persistence.PostDao;
 
+@Component
 public class PostController {
 
 	public PostController() {

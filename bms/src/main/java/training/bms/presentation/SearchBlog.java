@@ -3,17 +3,21 @@ package training.bms.presentation;
 import java.util.List;
 
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
 
 import training.bms.business.Blog;
 import training.bms.business.BlogController;
 import training.bms.business.BlogSearchOptions;
 import training.bms.business.BusinessException;
 
-@ManagedBean
-@SessionScoped
+//@ManagedBean
+//@SessionScoped
+
 // dita a vida util do menagedbean, dizendo que após receber uma requisição ele
 // não descartará os valores do managedbean(e ele próprio)
 // cada usuario tem sua sessão que é uma area de memoria aplicada a ele
@@ -21,12 +25,19 @@ import training.bms.business.BusinessException;
 // request headers -> procura identificador de usuário
 // caso não acha ele manda um cookie para aquele usuário ->
 // cookie reiject (quando tenta capturar o cookie)
+
+@Component
+@Scope(WebApplicationContext.SCOPE_SESSION)
+// scope padrão do spring seria SCOPE_APPLICATION, ou seja, enquanto a aplicação
+// estiver levantada seria 1 menaged bean. sendo compartilhados para todos os
+// usuários.
 public class SearchBlog {
 
 	private BlogSearchOptions options;
 	private List<Blog> result;
 	private Blog blog;
 	private boolean blogDeleted = false;
+	private @Autowired BlogController controller;
 
 	public Blog getBlog() {
 		return blog;
@@ -73,7 +84,6 @@ public class SearchBlog {
 
 	public void search() {
 
-		BlogController controller = new BlogController();
 		result = controller.searchBlog(options);
 	}
 
@@ -103,7 +113,6 @@ public class SearchBlog {
 		FacesMessage message = new FacesMessage();
 
 		try {
-			BlogController controller = new BlogController();
 			controller.updateBlog(blog);
 			// deixa os valores em branco ao apertar o botao back
 			reset();
@@ -143,7 +152,6 @@ public class SearchBlog {
 
 		FacesMessage message = new FacesMessage();
 
-		BlogController controller = new BlogController();
 		controller.deleteBlog(blog);
 		// deixa os valores em branco ao apertar o botao back
 		reset();

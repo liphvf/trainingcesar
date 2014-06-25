@@ -19,10 +19,6 @@ public class BlogDao {
 	// livro fantasico sobre concorrencia em java = JAVA CONCURRENCY PRACTICE
 	// (PAPERBACK) BY BRIAN GOETZ, TIM PEIERLS
 
-	// control + shift + T = busca classes
-
-	//Control + o
-	
 	// private final EntityManagerFactory factory =
 	// EntityManagerFactoryHolder.factory;
 	// continuaria como tred safe pois, ela é final, só lê

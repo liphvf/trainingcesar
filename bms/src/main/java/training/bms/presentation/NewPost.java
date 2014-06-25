@@ -4,14 +4,21 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
+
 import training.bms.business.Post;
 import training.bms.business.PostController;
 import training.bms.business.BusinessException;
 
-@ManagedBean
+@Component
+@Scope(WebApplicationContext.SCOPE_REQUEST)
 public class NewPost {
 
 	private PostForm form;
+	private @Autowired PostController controller;
 
 	public NewPost() {
 		form = new PostForm();
@@ -31,7 +38,6 @@ public class NewPost {
 		FacesMessage message = new FacesMessage();
 
 		try {
-			PostController controller = new PostController();
 
 			controller.savePost(form.getPost());
 			message.setSummary("post was sucessfully saved");

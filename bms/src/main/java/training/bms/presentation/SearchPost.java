@@ -8,13 +8,18 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
+
 import training.bms.business.Post;
 import training.bms.business.PostController;
 import training.bms.business.PostSearchOptions;
 import training.bms.business.BusinessException;
 
-@ManagedBean
-@SessionScoped
+@Component
+@Scope(WebApplicationContext.SCOPE_SESSION)
 public class SearchPost {
 
 	private static final int RESULTS_PER_PAGE = 2;
@@ -26,6 +31,8 @@ public class SearchPost {
 	private ArrayList<Integer> pages;
 	// esse page é a página atual
 	private int page;
+	
+	private @Autowired PostController controller;
 
 	public int getPage() {
 		return page;
@@ -100,7 +107,6 @@ public class SearchPost {
 
 	public void search() {
 
-		PostController controller = new PostController();
 		// result = controller.searchPost(options);
 
 		int resultCount = controller.searchPostCount(options);
@@ -119,7 +125,6 @@ public class SearchPost {
 	}
 
 	public void goToPage(int page) {
-		PostController controller = new PostController();
 
 		this.page = page;
 		// (pagina - 1) * results per pagina + 1
@@ -161,7 +166,6 @@ public class SearchPost {
 		FacesMessage message = new FacesMessage();
 
 		try {
-			PostController controller = new PostController();
 			controller.updatePost(post);
 			// deixa os valores em branco ao apertar o botao back
 			reset();
@@ -192,7 +196,6 @@ public class SearchPost {
 
 		FacesMessage message = new FacesMessage();
 
-		PostController controller = new PostController();
 		controller.deletePost(form.getPost());
 		reset();
 

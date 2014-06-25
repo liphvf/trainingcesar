@@ -12,28 +12,21 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
-
-			<!-- o scope, serve para definir onde ele será impregado. -->
-
 			<scope>test</scope>
 
 		</dependency>
 
-		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>4.3.4.Final</version>
 		</dependency>
 
-		<!-- banco de dados h2 -->
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
 			<version>1.4.178</version>
 		</dependency>
-
-		<!-- Bean Validation -->
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
@@ -55,11 +48,24 @@
 			<version>2.2.2</version>
 		</dependency>
 
-		<!-- commons lang, biblioteca para fazer o scaping no caso do html XSS  -->
 		<dependency>
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<version>2.6</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>3.2.8.RELEASE</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>3.2.8.RELEASE</version>
 		</dependency>
 
 

@@ -2,9 +2,12 @@ package training.bms.business;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import training.bms.persistence.PostDao;
 import training.bms.persistence.TagDao;
 
+@Component
 public class TagController {
 
 	private TagDao dao;

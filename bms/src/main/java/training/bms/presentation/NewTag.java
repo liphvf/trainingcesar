@@ -4,15 +4,22 @@ import java.util.ArrayList;
 
 import javax.faces.bean.ManagedBean;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.WebApplicationContext;
+
 import training.bms.business.Post;
 import training.bms.business.Tag;
 import training.bms.business.TagController;
 
-@ManagedBean
+@Component
+@Scope(WebApplicationContext.SCOPE_REQUEST)
 public class NewTag {
 
 	private Tag tag;
 	private ArrayList<Post> postCount;
+	private @Autowired TagController controller;
 
 	public NewTag() {
 		tag = new Tag();
@@ -29,7 +36,6 @@ public class NewTag {
 
 	public void saveTag() {
 
-		TagController controller = new TagController();
 
 		controller.saveTag(tag);
 	}
@@ -41,7 +47,6 @@ public class NewTag {
 	}
 
 	public void setPostCount(ArrayList<Post> postCount) {
-		TagController controller = new TagController();
 		this.postCount = postCount;
 	}
 

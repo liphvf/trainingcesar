@@ -3,6 +3,8 @@ package training.bms.presentation;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import training.bms.business.Blog;
 import training.bms.business.BlogController;
 import training.bms.business.BlogSearchOptions;
@@ -15,9 +17,9 @@ public class PostForm {
 	private List<Blog> blogs;
 	private List<Tag> tags;
 	private Post post;
+	private @Autowired BlogController controller;
 
 	public PostForm() {
-		BlogController controller = new BlogController();
 		blogs = controller.searchBlog(new BlogSearchOptions());
 
 		TagController controller2 = new TagController();
