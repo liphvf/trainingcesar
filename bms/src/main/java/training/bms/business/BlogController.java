@@ -2,8 +2,7 @@ package training.bms.business;
 
 import java.util.List;
 
-import javax.management.RuntimeErrorException;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import training.bms.persistence.BlogDao;
@@ -12,12 +11,7 @@ import training.bms.persistence.BlogDao;
 @Component
 public class BlogController {
 
-	public BlogController() {
-		dao = new BlogDao();
-
-	}
-
-	private BlogDao dao;
+	private @Autowired BlogDao dao;
 
 	public void saveBlog(Blog blog) {
 

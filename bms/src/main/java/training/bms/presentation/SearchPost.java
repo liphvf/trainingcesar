@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +11,10 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
 
+import training.bms.business.BusinessException;
 import training.bms.business.Post;
 import training.bms.business.PostController;
 import training.bms.business.PostSearchOptions;
-import training.bms.business.BusinessException;
 
 @Component
 @Scope(WebApplicationContext.SCOPE_SESSION)

@@ -2,14 +2,10 @@ package training.bms.presentation;
 
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.WebApplicationContext;
-
-import com.sun.faces.facelets.util.Classpath.SearchAdvice;
 
 import training.bms.business.Blog;
 import training.bms.business.BlogController;

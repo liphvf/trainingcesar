@@ -3,15 +3,19 @@ package training.bms.persistence;
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
+
+import org.springframework.stereotype.Component;
 
 import training.bms.business.Blog;
 import training.bms.business.BlogSearchOptions;
 
+@Component
 public class BlogDao {
+
+	private @PersistenceContext
+	EntityManager manager;
 
 	// classe statles, sem atributos, por isso tread safe, ser capais de invocar
 	// diversos metodos concorentimente sem problema.
@@ -47,24 +51,19 @@ public class BlogDao {
 
 		// no caso estou referenciando a fabrica presente em
 		// EntityManagerFactoryHolder
-		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
 
 		// ele cria conecção com o bando de dados, salva o referencia da factory
 		// para criar conecxão
-		EntityManager manager = factory.createEntityManager();
 
 		// crie uma transação
-		EntityTransaction transaction = manager.getTransaction();
 
 		// inicia transação
-		transaction.begin();
 
 		// Blog blog = new Blog();
 		// o id está sendo criado automagicamente pelo banco de dados
 		manager.persist(blog);
 
 		// termina transação comita =)
-		transaction.commit();
 
 	}
 
@@ -77,12 +76,11 @@ public class BlogDao {
 		// preocupar com o and.
 		// exemplo, se não colocar ele ficaria um and na frente sem ter nada
 		// para o and, e daria problema.
-		if (options.getId() != null ) {
+		if (options.getId() != null) {
 			predicate.append(" and blog.id = :blogId");
 
 		}
-		
-		
+
 		if (options.getName() != null && options.getName().length() > 0) {
 			predicate.append(" and upper(blog.name) like :blogName");
 
@@ -95,15 +93,11 @@ public class BlogDao {
 
 		}
 
-		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
-		EntityManager manager = factory.createEntityManager();
-
 		TypedQuery<Blog> query = manager.createQuery(
 				"select blog from Blog blog where " + predicate, Blog.class);
-		
-		
-		if (options.getId() != null ) {
-			query.setParameter("blogId", + options.getId() );
+
+		if (options.getId() != null) {
+			query.setParameter("blogId", +options.getId());
 
 		}
 
@@ -128,9 +122,6 @@ public class BlogDao {
 	// mudei o nome de select blog para searchBlog
 	public Blog searchBlog(String blogName) {
 
-		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
-		EntityManager manager = factory.createEntityManager();
-
 		TypedQuery<Blog> query = manager
 				.createQuery(
 						"select blog from training.bms.business.Blog blog where upper(blog.name) = :blogName ",
@@ -149,17 +140,12 @@ public class BlogDao {
 	}
 
 	public void deleteBlog(Blog blog) {
-		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
-		EntityManager manager = factory.createEntityManager();
-		EntityTransaction transaction = manager.getTransaction();
 
 		// carregando o blog do banco
 		Blog managedBlog = manager.find(Blog.class, blog.getId());
 
 		// removendo
-		transaction.begin();
 		manager.remove(managedBlog);
-		transaction.commit();
 
 		// para excluir a pessoa tem que usar o remove no mesmo manager que eu
 		// carreguei o objeto no banco
@@ -169,17 +155,8 @@ public class BlogDao {
 	// update
 	public void updateBlog(Blog blog) {
 
-		EntityManagerFactory factory = EntityManagerFactoryHolder.factory;
-
-		EntityManager manager = factory.createEntityManager();
-
-		EntityTransaction transaction = manager.getTransaction();
-
-		transaction.begin();
 		// merge está no JPA
 		manager.merge(blog);
-
-		transaction.commit();
 
 	}
 

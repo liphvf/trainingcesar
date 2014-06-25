@@ -2,8 +2,7 @@ package training.bms.business;
 
 import java.util.List;
 
-import javax.management.RuntimeErrorException;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import training.bms.persistence.PostDao;
@@ -11,12 +10,7 @@ import training.bms.persistence.PostDao;
 @Component
 public class PostController {
 
-	public PostController() {
-		dao = new PostDao();
-
-	}
-
-	private PostDao dao;
+	private @Autowired PostDao dao;
 
 	public void savePost(Post post) {
 
@@ -36,7 +30,7 @@ public class PostController {
 
 		return dao.searchPost(options);
 	}
-	
+
 	public Integer searchPostCount(PostSearchOptions options) {
 
 		return dao.searchPostCount(options);
@@ -47,30 +41,29 @@ public class PostController {
 		dao.deletePost(post);
 	}
 
-//	public void updatePost(Post post) {
-//
-//		Post databasePost = dao.searchPost(post.getTitle());
-//
-//		if (databasePost == null) {
-//			dao.updatePost(post);
-//		} else {
-//
-//			if (post.getId().equals(databasePost.getId())) {
-//
-//				dao.updatePost(post);
-//
-//			} else {
-//				throw new BusinessException(" the is a Post named "
-//						+ post.getTitle() + " already ");
-//
-//			}
-//		}
-//
-//	}
+	// public void updatePost(Post post) {
+	//
+	// Post databasePost = dao.searchPost(post.getTitle());
+	//
+	// if (databasePost == null) {
+	// dao.updatePost(post);
+	// } else {
+	//
+	// if (post.getId().equals(databasePost.getId())) {
+	//
+	// dao.updatePost(post);
+	//
+	// } else {
+	// throw new BusinessException(" the is a Post named "
+	// + post.getTitle() + " already ");
+	//
+	// }
+	// }
+	//
+	// }
 
-	
 	public void updatePost(Post post) {
 		dao.updatePost(post);
 	}
-	
+
 }

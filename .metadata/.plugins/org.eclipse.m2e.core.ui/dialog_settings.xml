@@ -55,6 +55,7 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="/home/liphvf/Documents/osms"/>
 			<item value="/home/liphvf/Downloads/Comparar/bms"/>
 			<item value="/home/liphvf/Downloads/Comparar/bms karla"/>
 			<item value="/home/liphvf/Dropbox/Documents/Treinamendo C.E.S.A.R/Eclipse_Workspace/osms"/>

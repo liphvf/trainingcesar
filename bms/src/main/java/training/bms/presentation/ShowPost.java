@@ -2,8 +2,6 @@ package training.bms.presentation;
 
 import java.util.List;
 
-import javax.faces.bean.ManagedBean;
-
 import org.apache.commons.lang.StringEscapeUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;

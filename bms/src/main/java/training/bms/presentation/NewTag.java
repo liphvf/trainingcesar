@@ -2,8 +2,6 @@ package training.bms.presentation;
 
 import java.util.ArrayList;
 
-import javax.faces.bean.ManagedBean;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
