@@ -14,5 +14,17 @@
 	<context:component-scan base-package="training.bms"></context:component-scan>
 
 
+	<!-- diz ao spring o que ele precisa para criar um entitymanager -->
+	<bean name="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost/wordrails"/>
+   		<property name="username" value="wordrails"/>
+   		<property name="password" value="wordrails"/>   		   		
+	</bean>
 
 </beans>
