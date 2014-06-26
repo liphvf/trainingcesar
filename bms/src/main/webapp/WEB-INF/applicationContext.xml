@@ -20,11 +20,32 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 
-	<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource" destroy-method="close">
-		<property name="driverClass" value="com.mysql.jdbc.Driver"/>
-		<property name="jdbcUrl" value="jdbc:mysql://localhost/wordrails"/>
-   		<property name="username" value="wordrails"/>
-   		<property name="password" value="wordrails"/>   		   		
+
+	<!-- configurando banco de dados, para o spring usar ele -->
+	<bean id="dataSource" class="com.jolbox.bonecp.BoneCPDataSource"
+		destroy-method="close">
+		<property name="driverClass" value="org.h2.Driver" />
+		<property name="jdbcUrl" value="jdbc:h2:tcp://localhost/~/bms" />
+		<property name="username" value="sa" />
+		<property name="password" value="" />
+	</bean>
+
+	<!-- spring gerenciando trasação para aumentar o escopo de transação, e 
+		aumentar o scopo do menegar -->
+
+	<!-- evita o lazaly inicialize execption... pois ao colocar o manager como 
+		scopo de requisição(começa quando usuário aperta o botao, até ele ver a respota), 
+		ele manter o valor do manager ao terminar o metodo do dao. no exemplo... 
+		caso tenho um post e uma tag com ele, lá no post estava como EAGER para carregar 
+		as tags associadas a um post logo, caso não tiver, ele da o ERRO. se o spring 
+		tiver um manager com escpo de requisição não precisaremos disso, pois ele 
+		manter o valores. -->
+
+	<!-- permitir que o sprign crie transação utulizando o transactionManager -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<bean name="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
 
 </beans>

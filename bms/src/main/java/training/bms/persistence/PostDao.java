@@ -6,10 +6,13 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
+import org.springframework.stereotype.Component;
+
 import training.bms.business.Post;
 import training.bms.business.PostSearchOptions;
 import training.bms.business.PostSearchOptions.Order;
 
+@Component
 public class PostDao {
 
 	private @PersistenceContext

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
 
 import training.bms.persistence.BlogDao;
 
@@ -11,13 +12,15 @@ import training.bms.persistence.BlogDao;
 @Component
 public class BlogController {
 
-	private @Autowired BlogDao dao;
+	private @Autowired
+	BlogDao dao;
 
+	@Transactional
 	public void saveBlog(Blog blog) {
 
 		if (dao.containsBlog(blog.getName())) {
-			throw new BusinessException(" the is a blog named " + blog.getName()
-					+ " already ");
+			throw new BusinessException(" the is a blog named "
+					+ blog.getName() + " already ");
 		} else {
 			dao.insertBlog(blog);
 		}
@@ -37,11 +40,13 @@ public class BlogController {
 		return dao.searchBlog(options);
 	}
 
+	@Transactional
 	public void deleteBlog(Blog blog) {
 
 		dao.deleteBlog(blog);
 	}
 
+	@Transactional
 	public void updateBlog(Blog blog) {
 
 		Blog databaseBlog = dao.searchBlog(blog.getName());

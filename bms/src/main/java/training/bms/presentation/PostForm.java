@@ -3,7 +3,10 @@ package training.bms.presentation;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import javax.faces.context.FacesContext;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.jsf.FacesContextUtils;
 
 import training.bms.business.Blog;
 import training.bms.business.BlogController;
@@ -17,12 +20,20 @@ public class PostForm {
 	private List<Blog> blogs;
 	private List<Tag> tags;
 	private Post post;
-	private @Autowired BlogController controller;
 
 	public PostForm() {
+
+		FacesContext facesContext = FacesContext.getCurrentInstance();
+		ApplicationContext applicationContext = FacesContextUtils
+				.getWebApplicationContext(facesContext);
+		applicationContext.getBean(BlogController.class);
+
+		BlogController controller = applicationContext
+				.getBean(BlogController.class);
 		blogs = controller.searchBlog(new BlogSearchOptions());
 
-		TagController controller2 = new TagController();
+		TagController controller2 = applicationContext
+				.getBean(TagController.class);
 		tags = controller2.searchTag(new TagSearchOptions());
 
 		post = new Post();
@@ -92,11 +103,11 @@ public class PostForm {
 
 	public List<String> getTagIds() {
 		List<String> tagIds = new ArrayList<>();
-		
+
 		for (Tag tag : post.getTags()) {
 			tagIds.add(tag.getId().toString());
 		}
-		
+
 		return tagIds;
 	}
 
