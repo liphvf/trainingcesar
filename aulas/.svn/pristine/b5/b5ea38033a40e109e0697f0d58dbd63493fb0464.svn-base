@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Criando um post</title>
+	</head>
+	<body>
+		<h1>Criando um post</h1>
+
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>
+				JSF
+				<ul>
+					<li>Componentes de seleção</li>
+				</ul>
+			</li>
+			<li>
+				JPA
+				<ul>
+					<li>Relacionamentos 1 para N</li>
+				</ul>
+			</li>			
+		</ul>
+
+		<h2>Estudo de caso</h2>
+		<p>
+			Agora que a manutenção de blogs está concluída, você e seu cliente acordaram que a próxima funcionalidade a ser desenvolvida é a de criação de um post. Para criar um post o usuário deve:
+		</p>
+		<ol>
+			<li>indicar em qual blog o post será publicado.</li>
+			<li>fornecer o título e conteúdo do post.</li>
+		</ol>
+		<p>
+			O BMS deve armazenar a data de criação de cada post.  
+		</p>
+
+		<h2>Roteiro</h2>
+		<ol>
+			<li>Crie a entidade Post.</li>
+			<li>Declare o relacionamento entre as entidade Blog (1) e Post (N).</li>
+			<li>Crie a página de inclusão de post.</li>
+			<li>Crie a tag &lt;bms:post&gt;.</li>
+			<li>Crie o managed bean NewPost.</li>
+			<li>Crie o controlador PostController.</li>
+			<li>Inclua a lista de blogs no managed bean NewPost.</li>
+			<li>Defina o escopo do managed bean NewBlog como SessionScoped.</li>
+			<li>Modifique a lista de blogs para exibir o nome dos blogs.</li>
+			<li>Modifique a lista de blogs para exibir um item correspondente à não seleção de um blog.</li>
+			<li>Inclua o atributo blogIdentifier no managedBean newBlog.</li>
+			<li>Torne o controle blog obrigatório.</li>
+			<li>Associe o blog selecionado ao post no método setBlogIdentifier do manage bean NewPost.</li>
+			<li>Implemente o método savePost na classe PostController.</li>
+			<li>Crie a classe PostDao com os método insertPost e updatePost.</li>
+			<li>Implemente as funcionalidades de pesquisar, ediar e excluir post.</li>
+			<li>Inclua uma coleção de posts como atributo da classe Blog.</li>
+			<li>Inclua o atributo mapped-by no mapeamento da coleção de posts.</li>
+			<li>Inclua o atributo cascade na coleção de posts.</li>
+		</ol>
+
+		<h2>Leitura</h2>
+		<ul>
+			<li>
+				Leia o artigo <a href="http://www.javaworld.com/javaworld/jw-01-2008/jw-01-jpa2.html?page=1">Understanding JPA, Part 2: Relationships the JPA way</a>.
+			</li>
+		</ul>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Modifique o OSMS para que as categorias formem uma hierarquia, ou seja, uma categoria possui n subcategorias.
+			</li>
+			<li>
+				Modifique os testes de integração para levar em contar esta mudança. 
+			</li>
+		</ol>
+	</body>
+</html>

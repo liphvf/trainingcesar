@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Reusando código</title>
+	</head>
+	<body>
+		<h1>Reusando código</h1>
+
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>Reuso de código</li>
+			<li>Refactoring</li>						
+		</ul>
+
+		<h2>Estudo de caso</h2>
+		<p>
+			Você percebeu que o código do CRUD de blogs é muito parecido com o do CRUD de posts. Você prevê que, para desenvolver o CRUD de comentários, desenvolverá, novamente, um código muito parecido. Você deseja reutilizar o código dos CRUDs de forma a tornar mais rápida a implementação do CRUD de comentários, reduzir o esforço com testes e facilitar futuras manutenções.  
+		</p>
+
+		<h2>Roteiro</h2>
+		<ol>
+			<li>Crie as classes AbstractEntityDao e AbstractEntitySearchOptions.</li>
+			<li>Modifique a classe BlogDao para herdar de AbstractEntityDao.</li>
+			<li>Modifique a classe BlogSearchOptions para herdar de AbstractEntitySearchOptions.</li>
+			<li>Crie a classe AbstractEntityController.</li>
+			<li>Modifique a classe BlogController para herdar da classe AbstractEntityController.</li>
+			<li>Crie a classe AbstractNewEntity.</li>
+			<li>Modifique a classe NewBlog para herdar da classe AbstractNewEntity.</li>
+			<li>Modifique a classe NewPost para herdar da classe AbstractNewEntity.</li>
+			<li>Crie a classe AbstractSearchEntity.</li>
+			<li>Modifique a classe SearchBlog para herdar da classe AbstractSearchEntity.</li>
+			<li>Modifique a classe SearchPost para herdar da classe AbstractSearchEntity.</li>
+		</ol>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Modifique o OSMS para utilizar o framework.
+			</li>
+			<li>
+				Adicione o CRUD de produtos ao OSMS.
+			</li>			
+		</ol>
+	</body>
+</html>

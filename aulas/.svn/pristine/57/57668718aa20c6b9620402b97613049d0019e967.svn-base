@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Pesquisando um blog</title>
+	</head>
+	<body>
+		<h1>Pesquisando um blog</h1>
+
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>
+				CSS
+				<ul>
+					<li>Tabelas</li>
+					<li>Divs</li>
+					<li>Links</li>
+				</ul>
+			</li>		
+			<li>
+				JSF
+				<ul>
+					<li>Templates</li>
+					<li>Tabelas</li>
+					<li>Convertes</li>
+					<li>Escopo de sessão</li>					
+				</ul>
+			</li>			
+			<li>
+				JPA
+				<ul>
+					<li>JPQL</li>
+					<li>Criteria - não tipada</li>
+					<li>Criteria - tipada</li>
+				</ul>				
+			</li>	
+		</ul>
+
+		<h2>Estudo de caso</h2>
+		<p>
+			Você e seu cliente acordaram que a próxima funcionalidade a ser desenvolvida é a de pesquisa de blog. 
+			O formulário de pesquisa deve possuir controles para que o usuário forneça o nome e/ou a descrição do blog.
+		</p>
+
+		<h2>Roteiro</h2>
+		<ol>
+			<li>Crie a página de pesquisa de blog.</li>
+			<li>Inclua o nome e o menu do BMS na página de pesquisa.</li>
+			<li>Modifique a aparência no nome do BMS na página de pesquisa.</li>
+			<li>Modifique a posição do formulário na página de pesquisa.</li>
+			<li>Modifique a aparência do menu.</li>
+			<li>Crie o template do BMS.</li>
+			<li>Aplique o template às páginas de inclusão de blog e de pesquisa.</li>
+			<li>Associe os controles da página de pesquisa ao managed bean SearchBlog.</li>
+			<li>Implemente o método searchBlog no managed bean SearchBlog.</li>
+			<li>Crie o teste searchBlogTest.</li>
+			<li>Modifique o código para passar no teste searchBlogTest.</li>
+			<li>Implemente o método selectBlog da classe BlogDao com JPQL.</li>			
+			<li>Modifique a página de pesquisa para exibir os blogs encontrados.</li>
+			<li>Modifique a página de pesquisa para alternar a cor de fundo das linhas do resultado.</li>
+			<li>Modifique o formato da data de criação dos blogs.</li>			
+			<li>Crie a classe BMSTestCase refatorando a classe NewBlogTest.</li>
+			<li>Crie os testes de integração para a funcionalidade de pesquisa de blog.</li>			
+			<li>Configure o Hibernate JPA 2 Metamodel Generator.</li>
+			<li>Implemente o método selectBlog com a API Criteria.</li>
+		</ol>
+
+		<h2>Leitura</h2>
+		<ul>
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/giepx.html">Introduction to Facelets</a> do livro The Java EE 6 Tutorial: Basic Concepts.
+			</li>		
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/bnbtg.html">The Java Persistence Query Language</a> do livro The Java EE 6 Tutorial: Basic Concepts.
+			</li>
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/gjitv.html">Using the Criteria API to Create Queries</a> do livro The Java EE 6 Tutorial: Basic Concepts.
+			</li>			
+			<li>
+				Leia o artigo <a href="http://www.ibm.com/developerworks/java/library/j-typesafejpa">Dynamic, typesafe queries in JPA 2.0</a>.
+			</li>
+		</ul>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Desenvolva a funcionalidade de pesquisa de categoria no OSMS. 
+			</li>
+			<li>
+				Desenvolva testes de integração para a funcionalidade de pesquisa de categoria. 
+			</li>
+		</ol>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Mantendo tags</title>
+	</head>
+	<body>
+		<h1>Mantendo tags</h1>
+
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>
+				JPA
+				<ul>
+					<li>Relacionamentos M para N</li>
+				</ul>
+			</li>
+			<li>Spring</li>
+		</ul>
+
+		<h2>Estudo de caso</h2>
+		<p>
+			O lançamento dos blogs foi um sucesso! Seu cliente percebeu um aumento de produtividade no processo de publicação dos blogs e está disposto a fazer um novo investimento no BMS: permitir que tags sejam associadas a um post. 
+		</p>
+
+		<h2>Roteiro</h2>
+		<ol>
+			<li></li>
+		</ol>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Modifique o restando do código do BMS para utilizar o Spring.
+			</li>		
+			<li>
+				Torne o código utilizado no formulário de associação de tags reutilizável.
+			</li>
+		</ol>
+	</body>
+</html>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Implementando a interface java.util.Collection</title>
+	</head>
+	<body>
+		<h1>Implementando a interface java.util.Collection</h1>
+		
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>TDD - Test Driven Development</li>
+			<li>JUnit</li>
+			<li>Geração e refatoração de código</li>
+			<li>Cobertura de código</li>
+		</ul>
+		
+		<h2>Estudo de caso</h2>
+		<p>
+			<b>Parabéns!</b> Você foi contratado pela <a href="http://www.oracle.com">Oracle</a> e, como primeira atribuição, foi encarregado de implementar a interface <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html">java.util.Collection</a>.
+		</p>
+		<ul>
+			<li>Qual método de desenvolvimento você utilizará?</li>
+			<li>	
+				Como você garantirá a correção de sua implementação?
+				<ul>
+					<li>
+						<b>Lembre-se que milhões de desenvolvedores utilizarão sua implementação!</b>
+					</li>
+				</ul>
+			</li>
+			<li>Que tal começar escrevendo um teste?</li>
+		</ul>					
+
+		<h2>Roteiro</h2>
+		<ol>
+			<li>Crie o teste emptyCollectionSizeTest.</li>
+			<li>Modifique o código para passar no teste emptyCollectionSizeTest.</li>
+			<li>Crie os testes singletonCollectionSizeTest, addToEmptyCollectionTest e emptyCollectionIteratorTest.</li>
+			<li>Modifique o código para passar nos testes singletonCollectionSizeTest, addToEmptyCollectionTest e emptyCollectionIteratorTest.</li>
+		</ol>
+
+		<h2>Leitura</h2>
+		<ul>
+			<li>
+				Leia o capítulo <a href="http://pearsonhighered.com/assets/hip/us/hip_us_pearsonhighered/samplechapter/0131016490.pdf">Test-Driven Development</a> do livro Test-Driven Development: A Practical Guide. 				
+			</li>
+			<li>
+				Leia a <a href="http://media.pragprog.com/titles/utj/whatis.pdf">introdução</a> do livro Pragmatic Unit Testing in Java with JUnit.
+			</li>			
+		</ul>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Implemente um método que, dada uma base de cálculo anual em R$, calcule o imposto sobre a renda da pessoa física para o exercício de 2012, ano-calendário de 2011.
+				<ul>
+					<li>
+						Consulte a <a href="http://www.receita.fazenda.gov.br/aliquotas/TabProgressiva2012a2015.htm">Tabela Progressiva para Cálculo anual do Imposto sobre a Renda da Pessoa Física - a partir do exercício de 2012</a>.
+					</li>
+					<li>
+						<b>Lembre-se de começar pelos testes!</b>
+					</li>
+				</ul>
+			</li>		
+			<li>
+				Conclua a implementação da interface <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html">java.util.Collection</a>.
+				<ul>
+					<li>Consulte a view Tasks do Eclipse (Window &gt; Show View &gt; Tasks).</li>
+					<li>
+						<b>Lembre-se de começar pelos testes!</b>
+					</li>
+				</ul>					
+			</li>
+			<li>
+				Desenvolva uma nova implementação da interface <a href="http://download.oracle.com/javase/6/docs/api/java/util/Collection.html">java.util.Collection</a> que instancia um novo vetor de objetos com capacidade para mais dez elementos no lugar de apenas um.  
+				<ul>					
+					<li>Reutilize parte do código da implementação original, se possível.</li>
+					<li>
+						Você precisará desenvolver novos testes? Em caso positivo, <b>lembre-se de começar por eles!</b>
+					</li>					
+				</ul>					
+			</li>			
+			<li>
+				Implemente a interface <a href="http://download.oracle.com/javase/6/docs/api/java/util/Map.html">java.util.Map</a>.  
+				<ul>
+					<li>
+						<b>Lembre-se de começar pelos testes!</b>
+					</li>
+				</ul>				
+			</li>
+		</ol>
+	</body>
+</html>

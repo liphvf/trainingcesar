@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Inserindo um blog no banco de dados</title>
+	</head>
+	<body>
+		<h1>Inserindo um blog no banco de dados</h1>
+
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>PostgreSQL</li>
+			<li>pgAdmin</li>			
+			<li>
+				JDBC
+				<ul>
+					<li>Drivers</li>
+					<li>URLs</li>
+				</ul>				
+			</li>
+			<li>SQuirreL SQL Client</li>					
+			<li>JPA</li>
+			<li>Testes de integração</li>
+			<li>JWebUnit</li>
+			<li>DbUnit</li>
+		</ul>
+
+		<h2>Estudo de caso</h2>
+		<p>
+		</p>
+		
+		<h2>Roteiro</h2>
+		<ol>
+			<li>Configure o PostgreSQL.</li>
+			<li>Crie o banco de dados do BMS.</li>
+			<li>Conecte no banco de dados com o SQuirreL SQL Client.</li>
+			<li>Transforme a classe Blog em uma entidade persistente.</li>
+			<li>Inclua o atributo identifier na classe Blog.</li>
+			<li>Configure o BMS para trabalhar com JPA e crie as tabelas do banco de dados executando a classe CreateTables.</li>			
+			<li>Defina o nome da tabela na qual os blogs serão armazenados.</li>
+			<li>Defina o nome das colunas nas quais os atributos dos blogs serão salvos.</li>
+			<li>Defina a estratégia de geração da coluna BLO_IDENTIFIER.</li>
+			<li>Altere o tipo da coluna BLO_CREATION_DATE para date.</li>			
+			<li>Altere as colunas BLO_NAME e BLO_CREATION_DATE para not null.</li>
+			<li>Altere a coluna BLO_NAME para unique.</li>
+			<li>Implemente o método selectBlog.</li>
+			<li>Altere o código para tratar a exceção BusinessException.</li>
+			<li>Implemente o método insertBlog.</li>			
+			<li>Crie um projeto para conter os testes de integração do BMS.</li>
+			<li>Defina identificadores para os controles da página de inclusão de blog.</li>
+			<li>Crie o teste testBlankForm.</li>
+			<li>Crie o teste testNameTooLarge.</li>
+			<li>Crie o teste testDescriptionTooLarge.</li>
+			<li>Crie o teste testNameAndDescriptionTooLarge reusando o código dos testes anteriores.</li>
+			<li>Crie o teste testUniqueNameBlog.</li>
+			<li>Crie o teste testNonUniqueNameBlog.</li>
+			<li>Modifique os testes de integração para usar o DbUnit.</li>
+		</ol>
+		
+		<h2>Leitura</h2>
+		<ul>
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/bnbpz.html">Introduction to the Java Persistence API</a> do livro The Java EE 6 Tutorial: Basic Concepts.
+			</li>
+			<li>
+				Leia o <a href="http://jwebunit.sourceforge.net/quickstart.html">JWebUnit Quickstart</a>.
+			</li>
+			<li>
+				Leia a seção <a href="http://www.dbunit.org/howto.html">Getting Started</a> da documentação do DbUnit.
+			</li>
+			<li>
+				Leia a seção <a href="http://www.dbunit.org/components.html">Core Components</a> da documentação do DbUnit.
+			</li>					
+		</ul>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Crie testes de integração para a aplicação web que calcula o imposto sobre a renda da pessoa física.
+			</li>
+			<li>
+				Desenvolva testes de integração para a funcionalidade de criação de categoria do OSMS.
+			</li>			
+		</ol>
+	</body>
+</html>

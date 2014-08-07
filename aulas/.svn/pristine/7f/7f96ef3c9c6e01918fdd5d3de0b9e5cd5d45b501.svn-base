@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Editando um blog</title>
+	</head>
+	<body>
+		<h1>Editando um blog</h1>
+
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>
+				JSF
+				<ul>
+					<li>Links</li>
+					<li>Navegação</li>
+					<li>Componentes compostos</li>
+					<li>Ciclo de vida JSF</li>
+				</ul>
+			</li>			
+		</ul>
+
+		<h2>Estudo de caso</h2>
+		<p>
+			Seu cliente deseja poder editar o nome e a descrição de um blog que foi exibido no resultado da pesquisa. 
+		</p>
+
+		<h2>Roteiro</h2>
+		<ol>			
+			<li>Modifique a página de pesquisa para que, ao clicar no nome do blog, o método editBlog do managed bean SearchBlog seja executado.</li>
+			<li>Modifique o escopo do managed bean SearchBlog para SessionScoped.</li>
+			<li>Modifique a aparência do nome do blog na página de pesquisa.</li>
+			<li>Crie a página de alteração de blog copiando e modificando a página de inclusão.</li>									
+			<li>Crie o componente &lt;bms:blog&gt; que encapsula os atributos do blog.</li>
+			<li>Modifique a página de inclusão de blog e de edição para utilizar o componente &lt;bms:blog&gt;.</li>
+			<li>Declare a regra de navegação que fará com que a página de alteração seja exibida quando o nome do blog é clicado.</li>
+			<li>Adicione o botão voltar na página de edição de blog.</li>
+			<li>Declare o botão voltar como immediate.</li>
+			<li>Implemente o método saveBlog no managed bean SearchBlog.</li>
+			<li>Implemente o teste saveExistingBlog.</li>
+			<li>Modifique o código para passar no teste saveExistingBlog.</li>
+			<li>Implemente o método updateBlog.</li>
+			<li>Apague os parâmetros e o resultado da pesquisa após a alteração do blog.</li>
+			<li>Defina a variável blogSaved como false antes de exibir a página de edição.</li>
+			<li>Apague os parâmetros e o resultado da pesquisa quando o usuário acessar a página de pesquisa através do menu.</li>
+			<li>Crie testes de integração para a funcionalide de edição de blog.</li>
+		</ol>
+
+		<h2>Leitura</h2>
+		<ul>
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/bnaqz.html">Using JavaServer Faces Technology in Web Pages</a> do livro The Java EE 6 Tutorial: Basic Concepts.
+			</li>
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/gkhxa.html">Advanced Composite Components</a> do livro The Java EE 6 Tutorial: Basic Concepts.
+			</li>
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/gkmaa.html">JavaServer Faces Technology Advanced Concepts</a> do livro The Java EE 6 Tutorial: Basic Concepts. 
+			</li>
+			<li>
+				Leia o artigo <a href="http://www.ibm.com/developerworks/library/j-jsf2/#immediate">JSF for nonbelievers: The JSF application lifecycle</a>.
+			</li>
+		</ul>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Desenvolva a funcionalidade de edição de categoria no OSMS. 
+			</li>
+			<li>
+				Desenvolva testes de integração para a funcionalidade de edição de categoria. 
+			</li>
+		</ol>
+	</body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Criando um blog</title>
+	</head>
+	<body>
+		<h1>Criando um blog</h1>
+
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>Aplicações web</li>
+			<li>Tomcat</li>
+			<li>
+				JSF
+				<ul>
+					<li>Facelets</li>
+					<li>Componentes de texto</li>
+					<li>Managed beans</li>
+					<li>Botões</li>
+					<li>Mensagens</li>
+				</ul>
+			</li>			
+			<li>
+				CSS
+				<ul>
+					<li>Fontes</li>
+					<li>Cores</li>
+					<li>Tabelas</li>
+					<li>Controles text e textarea</li>
+				</ul>
+			</li>
+			<li>Bean validation</li>
+			<li>EasyMock</li>			
+		</ul>
+		
+		<h2>Estudo de caso</h2>
+		<p>
+			Você foi contratado por um blogueiro para desenvolver o <b>BMS - Blog Management System</b>. Seu cliente deseja gerenciar vários blogs simultâneamente com o sistema. Cada blog possui:
+		</p>
+		<ul>
+			<li>nome (deve ser único);</li>
+			<li>descrição (opcional);</li>
+			<li>data de criação.</li>
+		</ul>
+		<p>
+			Você e seu cliente acordaram que a primeira funcionalidade a ser desenvolvida será a de criação de blog.
+		</p>
+		
+		<h2>Roteiro</h2>
+		<ol>
+			<li>Configure o Tomcat.</li>
+			<li>Crie a aplicação web.</li>
+			<li>Configure a aplicação web no Tomcat.</li>
+			<li>Crie a página de inclusão de blog.</li>
+			<li>Configure a aplicação web para JSF.</li>
+			<li>Modifique a aparência da página de inclusão com CSS.</li>			
+			<li>Modifique a página de inclusão para exibir e alterar os atributos do managed bean NewBlog.</li>
+			<li>Modifique a página de inclusão para validar o nome e a descrição do blog.</li>
+			<li>Modifique a página de inclusão para invocar o método saveBlog quando o botão Save for pressionado.</li>						
+			<li>Modifique a página de inclusão para desabilitar os controles e exibir uma mensagem de confirmação da inclusão do blog.</li>						
+			<li>Crie o teste saveBlogTest.</li>						
+			<li>Modifique o código para passar no teste saveBlog.</li>			
+			<li>Modifique o teste saveBlogTest para usar um mock da classe BlogDAO.</li>			
+			<li>Modifique o código para passar no teste saveBlogTest.</li>
+			<li>Crie os testes saveNonUniqueNameBlogTest e saveNullBlogTest.</li>
+			<li>Modifique o código para passar no teste saveNullBlogTest.</li>
+		</ol>
+		
+		<h2>Leitura</h2>
+		<ul>
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/bnaph.html">JavaServer Faces Technology</a> do livro The Java EE 6 Tutorial: Basic Concepts.
+			</li>		
+			<li>
+				Leia o capítulo <a href="http://download.oracle.com/javaee/6/tutorial/doc/bnaqz.html">Using JavaServer Faces Technology in Web Pages</a> do livro The Java EE 6 Tutorial: Basic Concepts.
+			</li>			
+			<li>
+				Leia o capítulo <a href="http://ptgmedia.pearsoncmg.com/images/0131463055/samplechapter/0131463055_ch04.pdf">STANDARD JSF TAGS</a> do livro Core JavaServer Faces.
+			</li>		
+			<li>
+				Leio o capítulo <a href="http://www.oreilly.com/catalog/hfhtmlcss/chapter/ch08.pdf">Adding a Little Style</a> do livro Head First HTML with CSS & XHTML
+			</li>
+			<li>
+				Leia o <a href="http://www.w3schools.com/css/">CSS Tutorial</a>
+			</li>		
+			<li>
+				Leia o capítulo <a href="http://media.pragprog.com/titles/utj/mockobjects.pdf">Using Mock Objects</a> do livro ragmatic Unit Testing in Java with JUnit.
+			</li>
+			<li>
+				Leia o <a href="http://www.easymock.org/EasyMock3_0_Documentation.html">EasyMock 3.0 Readme</a>.
+			</li>
+		</ul>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Desenvolva uma aplicação web que calcula o imposto sobre a renda da pessoa física a partir da base de cálculo anual em R$ e o exercício fornecidos pelo usuário.
+				<ul>
+					<li>
+						Consulte a <a href="http://www.receita.fazenda.gov.br/aliquotas/TabProgressiva.htm">Tabela Progressiva para Cálculo anual do Imposto Sobre a Renda da Pessoa Física</a>.
+					</li>
+					<li>
+						Utilize CSS para definir a aparência das páginas de sua aplicação.
+					</li>
+					<li>
+						<b>Lembre-se de começar pelos testes!</b>
+					</li>
+					<li>
+						Utilize mocks para projetar a aplicação. 
+					</li>
+					<li>
+						Cubra 100% do código com os testes. 
+					</li>
+				</ul>				
+			</li>
+			<li>
+				Você foi contratado por uma empresa para desenvolver o OSMS - Online Store Management System. O sistema deve permitir que os produtos nele cadastrados sejam categorizados. Uma categoria possui um nome (deve ser único) e uma descrição.
+				<ul>
+					<li>
+						Crie uma aplicação web para o OSMS.
+					</li>
+					<li>
+						Implemente a funcionalidade de criação de categoria.
+					</li>
+					<li>
+						Utilize CSS para definir a aparência das páginas do OSMS.
+					</li>					
+					<li>
+						<b>Lembre-se de começar pelos testes!</b>
+					</li>
+					<li>
+						Utilize mocks para projetar a aplicação. 
+					</li>
+				</ul>				
+			</li>			
+		</ol>
+	</body>
+</html>

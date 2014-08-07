@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"/>
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu"/>				
+		<link href="../css/aula.css" rel="stylesheet" type="text/css"/>				
+		<title>Paginando o resultado da pesquisa de blogs</title>
+	</head>
+	<body>
+		<h1>Paginando o resultado da pesquisa de blogs</h1>
+
+		<h2>Conteúdo</h2>
+		<ul>
+			<li>
+				Paginação no banco de dados
+			</li>
+		</ul>
+
+		<h2>Estudo de caso</h2>
+		<p>
+			Seu cliente deseja que a lista de blogs seja paginada a cada 10 blogs. 
+		</p>
+
+		<h2>Roteiro</h2>
+		<ol>
+			<li>Crie a página pagination.xhtml contendo os botões First, Previous, Next e Last.</li>
+			<li>Crie o managed bean Pagination tendo como escopo a sessão.</li>
+			<li>Modifique a página pagination.xhtml para exibir os números das páginas.</li>
+			<li>Desative os botões First e Previous na primeira página.</li>
+			<li>Modifique a página pagination.xhtml de modo que o usuário, ao clicar no número de uma página, torne-a a página atual.</li>
+			<li>Desative os botões Next e Last na última página.</li>
+			<li>Modifique a aparência dos controles de paginação com CSS.</li>
+			<li>Torne os botões First, Previous, Next e Last funcionais.</li>
+			<li>Inclua os atributos firstResult e maxResults na classe BlogSearchOptions.</li>
+			<li>Modifique o managed bean SearchBlog para definir o número de blogs por página.</li>
+			<li>Modifique a classe BlogDAO para utilizar os atributos firstResult e maxResults.</li>			
+			<li>Inclua a paginação na página de pesquisa de blogs.</li>
+			<li>Inclua uma instância da classe Pagination no managed bean SearchBlog.</li>			
+			<li>Crie os métodos getBlogCount e selectCountBlog.</li>
+			<li>Modifique o construtor da classe Pagination para instancias as páginas em função do número de itens por página e de itens a serem paginados.</li>
+			<li>Exiba os controles de paginação apenas se a pesquisa encontrar algum blog.</li>			
+			<li>Implemente os métodos goToFirst, goToNext, goToPrevious e goToLast no managed bean SearchBlog.</li>
+		</ol>
+
+		<h2>Exercícios</h2>
+		<ol>
+			<li>
+				Acrescente paginação ao resultado da pesquisa de categorias. 
+			</li>
+			<li>
+				Modifique os testes de integração para levar em contar a paginação do resultado da pesquisa de categorias. 
+			</li>
+		</ol>
+	</body>
+</html>
