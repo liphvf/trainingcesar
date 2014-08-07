@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:bms="http://java.sun.com/jsf/composite/bms"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	<ui:composition template="/template.xhtml">
+		<ui:define name="title">Search Tag</ui:define>
+		<ui:define name="content">
+		<h1 class="page-header">Search Tag</h1>
+		  		
+		<h:form styleClass="form-horizontal">
+			<div class="form-group">
+	    		<label class="col-sm-2 control-label">Name</label>
+	    		<div class="col-sm-10">
+	      			<h:inputText styleClass="form-control" 
+	      						 value="#{searchTag.options.name}" 
+	      						 p:placeholder="Name"/>
+	    		</div>
+	  		</div>
+
+			<div class="form-group">
+    			<div class="col-sm-offset-2 col-sm-10">
+					<h:commandButton styleClass="btn btn-primary" 
+									 value="Search"
+									 action="#{searchTag.search}"/>    	  			
+    			</div>
+  			</div>
+  		</h:form>
+
+		<h:form>
+			<h:dataTable value="#{searchTag.result}"
+						 var="tag"
+						 styleClass="table table-bordered table-condensed table-hover table-striped"
+						 columnClasses="col-sm-12"
+						 rendered="#{searchTag.result.isEmpty() == false}">
+				<h:column>
+					<f:facet name="header">
+						Name
+					</f:facet>
+					#{tag.name}
+				</h:column>
+				
+				<h:column>					
+					<h:commandLink styleClass="btn btn-primary glyphicon glyphicon-pencil"
+								   title="Update"
+								   action="#{searchTag.update(tag)}"/>
+				</h:column>
+				
+				<h:column>
+					<h:commandLink styleClass="btn btn-danger glyphicon glyphicon-trash"
+								   title="Delete"
+								   action="#{searchTag.delete(tag)}"/>
+				</h:column>																						
+			</h:dataTable>
+			
+			<center>
+				<ul class="pagination">
+					<ui:repeat value="#{searchTag.pages}"
+							   var="page">	
+						<li class="#{searchTag.getPageClass(page)}">
+							<h:commandLink value="#{page}"
+										   action="#{searchTag.goToPage(page)}">
+								<f:ajax render="@form"></f:ajax>
+							</h:commandLink>
+						</li>
+					</ui:repeat>
+				</ul>
+			</center>
+			
+		</h:form>				
+		</ui:define>
+	</ui:composition>
+</html>

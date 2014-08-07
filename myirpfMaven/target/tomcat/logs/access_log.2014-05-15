@@ -1,0 +1,16 @@
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:27 -0300] "GET /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 800 http-bio-8080-exec-1 438
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:27 -0300] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-3 0
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:34 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml;jsessionid=83C4BCF4891FB6E49451D10333E75028 HTTP/1.1" 200 760 http-bio-8080-exec-4 18
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:38 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 760 http-bio-8080-exec-5 10
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:39 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 759 http-bio-8080-exec-6 9
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:39 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 759 http-bio-8080-exec-7 7
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:39 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 760 http-bio-8080-exec-8 6
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:39 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 760 http-bio-8080-exec-9 7
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:40 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 759 http-bio-8080-exec-10 7
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:43 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 780 http-bio-8080-exec-10 9
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:52 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 758 http-bio-8080-exec-3 8
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:15:52 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 758 http-bio-8080-exec-4 7
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:17:05 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 773 http-bio-8080-exec-6 7
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:17:11 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 774 http-bio-8080-exec-7 8
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:17:12 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 774 http-bio-8080-exec-7 10
+0:0:0:0:0:0:0:1 - - [15/May/2014:10:17:28 -0300] "POST /myirpfMaven/faces/calculadora/newCalculadora.xhtml HTTP/1.1" 200 859 http-bio-8080-exec-7 15

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14038765899970" configfile="/bms-saulo/src/main/webapp/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="754" id="pf14038766062281" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14038766062292 pf14038766062293 pf14038766062294 pf14038766062295" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="blog/searchBlog.xhtml" x="338" y="178" id="pf14038766062296" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14038766062292" path="/blog/searchBlog.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="blog/updateBlog.xhtml" x="338" y="562" id="pf14038766062297" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf14038766062293" path="/blog/updateBlog.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="blog/deleteBlog.xhtml" x="338" y="946" id="pf14038766062298" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf14038766062294" path="/blog/deleteBlog.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="post/updatePost.xhtml" x="338" y="1330" id="pf14038766062299" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14038766062295" path="/post/updatePost.xhtml"/>
+  <links id="pf14038766062292" target="pf14038766062296" source="pf14038766062281" outcome="searchBlog"/>
+  <links id="pf14038766062293" target="pf14038766062297" source="pf14038766062281" outcome="updateBlog"/>
+  <links id="pf14038766062294" target="pf14038766062298" source="pf14038766062281" outcome="deleteBlog"/>
+  <links id="pf14038766062295" target="pf14038766062299" source="pf14038766062281" outcome="updatePost"/>
+</pageflow:Pageflow>

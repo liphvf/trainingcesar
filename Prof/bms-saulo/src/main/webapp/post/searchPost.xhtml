@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:bms="http://java.sun.com/jsf/composite/bms"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+	<ui:composition template="/template.xhtml">
+		<ui:define name="title">Search Post</ui:define>
+		<ui:define name="content">
+		<h1 class="page-header">Search Post</h1>
+		  		
+		<h:form styleClass="form-horizontal">
+			<div class="form-group">
+	    		<label class="col-sm-2 control-label">Title</label>
+	    		<div class="col-sm-10">
+	      			<h:inputText styleClass="form-control" 
+	      						 value="#{searchPost.options.title}" 
+	      						 p:placeholder="Title"/>
+	    		</div>
+	  		</div>
+		
+			<div class="form-group">
+	    		<label class="col-sm-2 control-label">Body</label>
+	    		<div class="col-sm-10">
+	      			<h:inputText styleClass="form-control" 
+	      						 value="#{searchPost.options.body}" 
+	      						 p:placeholder="Body"/>
+	    		</div>
+	  		</div>
+	  		
+			<div class="form-group">
+    			<div class="col-sm-offset-2 col-sm-10">
+					<h:commandButton styleClass="btn btn-primary" 
+									 value="Search"
+									 action="#{searchPost.search}"/>    	  			
+    			</div>
+  			</div>
+  		</h:form>
+
+		<h:form>
+			<h:dataTable value="#{searchPost.result}"
+						 var="post"
+						 styleClass="table table-bordered table-condensed table-hover table-striped"
+						 columnClasses="col-sm-5,col-sm-6"
+						 rendered="#{searchPost.result.isEmpty() == false}">
+				<h:column>
+					<f:facet name="header">
+						Title
+					</f:facet>
+					#{post.title}
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">
+						Body
+					</f:facet>				
+					#{post.body}
+				</h:column>
+				
+				<h:column>					
+					<h:commandLink styleClass="btn btn-primary glyphicon glyphicon-pencil"
+								   title="Update"
+								   action="#{searchPost.update(post)}"/>
+				</h:column>
+				
+				<h:column>
+					<h:commandLink styleClass="btn btn-danger glyphicon glyphicon-trash"
+								   title="Delete"
+								   action="#{searchPost.delete(post)}"/>
+				</h:column>																						
+			</h:dataTable>
+			
+			<center>
+				<ul class="pagination">
+					<ui:repeat value="#{searchPost.pages}"
+							   var="page">	
+						<li class="#{searchPost.getPageClass(page)}">
+							<h:commandLink value="#{page}"
+										   action="#{searchPost.goToPage(page)}">
+								<f:ajax render="@form"></f:ajax>
+							</h:commandLink>
+						</li>
+					</ui:repeat>
+				</ul>
+			</center>
+			
+		</h:form>				
+		</ui:define>
+	</ui:composition>
+</html>
+
+
+
+
+
+
+
+
